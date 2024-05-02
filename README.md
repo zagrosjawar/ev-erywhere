@@ -4,4 +4,4 @@ MIX114 Web Development - Third Group Assignment: Electric Vehicle Charging Netwo
 
 Nå kan jeg bruke git yeay!
 
-** Hannah er slay **
+neida
