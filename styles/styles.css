@@ -1,66 +1,72 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body, html {
-    width: 100%;
-    height: 100%;
-    font-family: Raleway, Arial, sans-serif;
-    font-size: 16px;
-    background-color: #FFFFFF;
-    color:b black;
-  }
-  
-  /* Typography updated according to our design system 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: Raleway, Arial, sans-serif;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: b black;
+}
+
+/* Typography updated according to our design system 
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  h1, h2, h3, h4, h5, h6 {
-    line-height: 2rem;
-    font-family: Raleway, Arial, sans-serif;
-  }
-  h1, h2{
-    font-family: "Roboto", sans-serif;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 2rem;
+  font-family: Raleway, Arial, sans-serif;
+}
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+h1 {
+  font-size: 2rem; /* 32px */
+}
+h2 {
+  font-size: 1.5rem; /* 24px */
+}
+h3 {
+  font-size: 1.125rem; /* 20px */
+}
+
+/* Larger than phablet- updating according to our design system */
+@media (min-width: 320px) {
   h1 {
-    font-size: 2rem; /* 32px */
+    font-size: 1.3125rem;
   }
   h2 {
-    font-size: 1.5rem; /* 24px */
+    font-size: 1.125rem;
   }
   h3 {
-    font-size: 1.125rem; /* 20px */
+    font-size: 1rem;
   }
-
-
-  
-  /* Larger than phablet- updating according to our design system */
-  @media (min-width: 320px) {
-    h1 { font-size: 1.3125rem; }
-    h2 { font-size: 1.125rem; }
-    h3 { font-size: 1rem; }
-    body { font-size: 0.875rem; }
+  body {
+    font-size: 0.875rem;
   }
-
+}
 
 .logo {
     width: 280px;        
     height: 64px;        
-    margin-top: 114px;
-    margin-bottom: 20px;   
+    margin-top: 114px; 
+    margin-bottom: 20px;  
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 5px;
     display: block;      /* Ensures the margins apply correctly */
     object-fit: contain; /* Keeps aspect ratio within the given dimensions */
 }
 
-.bluetooth-icon {
-    width: 24px;
-    height: 24px;
-    margin-left: 10px;
-    vertical-align: middle;
-}
+
 
 .bluetooth-section  h2,
 .bluetooth-section  h3 {
@@ -68,74 +74,84 @@
     font-weight: normal;
 }
 .bluetooth-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 40px;
 }
 .bluetooth-section h3 {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .device-list {
-    list-style: none;
-    width: 100%;
-    padding: 10px;
-    margin: 0;
+  list-style: none;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
 }
 
 .device-list li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background: #E0F7FF;
-    width: 100%;
-    height: 52px;
-    padding: 10px 18px 10px 18px;
-    gap: 0px;
-    border-radius: 5px 0px 0px 0px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 32px;
-    margin-bottom: 17px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: #e0f7ff;
+  width: 100%;
+  height: 52px;
+  padding: 10px 18px 10px 18px;
+  gap: 0px;
+  border-radius: 5px 0px 0px 0px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  margin-bottom: 17px;
 }
 
-.device-list li:hover, .continue-button:hover {
-    background: #B2ECFF;
-    
+.device-list li:hover,
+.continue-button:hover {
+  background: #b2ecff;
 }
 
-.device-list li:active, .continue-button:active {
-    background: #7BCBC6;
-    transform: scale(0.98);
+.device-list li:active,
+.continue-button:active {
+  background: #7bcbc6;
+  transform: scale(0.98);
 }
 
-.device-list :last-child {
-    justify-content: center;
-    background: white;
-    text-align: center;
-
-    border: 2px dashed #E0F7FF;
-
+.device-list .add-device {
+  justify-content: center;
+  background: white;
+  text-align: center;
+  border: 2px dashed #e0f7ff;
 }
 
 .device-list .plus-icon {
-    padding: 0px 7px 0px 7px;
-    border: 1px solid #322F35;
-    border-radius: 50%;
-    margin-left: 10px;
+  margin-left: 10px;
+  border: none;
+  background: transparent;
 }
 
-.continue-button{
-    display: block;
-    color: #07494F;
-    background-color: white;
-    font-weight: 700;
-    height: 40px;
-    width: 95%;
-    padding:10px 24px 10px 24px;
-    border: 1px solid #07494F;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;   
+.device-list :last-child {
+  display: flex;
+  align-items: center;
+}
+
+.device-list .status {
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+}
+
+.continue-button {
+  display: block;
+  color: #07494f;
+  background-color: white;
+  font-weight: 700;
+  height: 40px;
+  width: 50%;
+  padding: 10px 24px 10px 24px;
+  border: 1px solid #07494f;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
