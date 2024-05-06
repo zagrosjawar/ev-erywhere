@@ -4,6 +4,10 @@ Pastes inn i styles etter hvert
 
 /* typography */
 
+button {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -90,14 +94,32 @@ h4 {
   padding: 0.5rem;
 }
 
-.koble-fra {
-  background-color: #801c0f;
-  color: white;
-  border: none;
+.legg-til-bruker,
+.koble-fra,
+.logg-ut {
   border-radius: 6px;
   padding: 0.8rem 1.5rem;
   font-weight: 500;
   letter-spacing: 0.5px;
+}
+
+.koble-fra,
+.logg-ut {
+  background-color: #801c0f;
+  color: white;
+  border: none;
+}
+
+.legg-til-bruker {
+  background-color: transparent;
+  border: 2px dashed #e0f7ff;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.legg-til-bruker,
+.logg-ut {
+  margin: 1rem;
 }
 
 .account-list-item {
@@ -112,4 +134,9 @@ h4 {
 }
 .account-settings-list h4 {
   margin: 1.5rem 0 0.5rem 0;
+}
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
