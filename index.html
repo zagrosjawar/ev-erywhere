@@ -39,7 +39,7 @@
           </li>
           <li>Edvard sin ride <span class="status">Ikke tilkoblet</span></li>
           <li>BMW <span class="status">Ikke tilkoblet</span></li>
-          <li class="add-device">
+          <li class="add-device"> <!-- Add new device/car -->
             Legg til
             <span class="plus-icon">
               <svg
@@ -63,6 +63,31 @@
       </div>
       <button class="continue-button">Fortsett Uten Bluetooth</button>
     </div>
+
+    <!-- Pop-up Form for Adding New Device -->
+  <div id="addDeviceModal" style="display: flex; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); align-items: center; justify-content: center;">
+    <div>
+      <form id="newDeviceForm">
+        <label for="deviceName">Navn*</label>
+        <input type="text" id="deviceName" name="deviceName" placeholder="Toyota Yaris" required><br><br>
+        <label for="deviceRange">Rekkevidde*</label>
+        <input type="text" id="deviceRange" name="deviceRange" placeholder="445 | km" required><br><br>
+        <label for="deviceOwner">Eier</label>
+        <input type="text" id="deviceOwner" name="deviceOwner" placeholder="Ditt navn"><br><br>
+        <button class="outlined-button" type="button" onclick="closeModal()">Tilbake</button>
+        <button class="filled-button" type="submit">Legg til</button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
     <script src="scripts/main.js" defer></script>
   </body>
 </html>
