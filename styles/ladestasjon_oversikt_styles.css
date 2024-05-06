@@ -1,0 +1,22 @@
+#ladestasjonerOverskrift {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+}
+
+#ladeContainer {
+    display: flex;
+    width: 377px;
+    height: 608px;
+    padding: 0px 17px;
+    align-items: center;
+    align-content: center;
+    gap: 15px 57px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+
+    border-radius: 8px;
+    border: 1px solid var(--Primary-Lys, #7BCBC6);
+    background: #FFF;
+}
