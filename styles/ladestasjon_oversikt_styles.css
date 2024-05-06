@@ -1,8 +1,13 @@
-#ladestasjonerOverskrift {
+#ladestasjonMainContent {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+#ladestasjonerOverskrift {
     margin-top: 90px;
+    margin-bottom: 26px;
 }
 
 #ladeContainer {
@@ -19,4 +24,15 @@
     border-radius: 8px;
     border: 1px solid var(--Primary-Lys, #7BCBC6);
     background: #FFF;
+}
+
+.defaultKnapp {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5em;
+    background-color: #07494F;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 6px;
 }
