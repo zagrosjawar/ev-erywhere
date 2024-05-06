@@ -40,7 +40,7 @@ h3 {
 }
 
 /* Larger than phablet- updating according to our design system */
-@media (min-width: 320px) {
+@media (min-width: 320px) and (max-width: 431px) {
   h1 {
     font-size: 1.3125rem;
   }
@@ -55,6 +55,50 @@ h3 {
   }
 }
 
+/* style that apply to all buttons filled and outlined buttons*/
+/* Button styles  */
+.filled-button, 
+.outlined-button {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 10px 24px;
+  cursor: pointer;
+  font-size: 16px; /* Adjust the font size as needed */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover states */
+}
+
+/* Styles for all filled buttons */
+.filled-button {
+  background-color: #07494f; 
+  color: white; 
+  border: 2px solid #07494f;
+}
+
+/* Styles for all outlined buttons */
+.outlined-button {
+  background-color: white;
+  color: #07494f; 
+  border: 2px solid #07494f;
+}
+
+/* Hover state for all filled buttons */
+.filled-button:hover {
+  background-color: #055c6e; /* Slightly darker for hover */
+  border-color: #055c6e; /* Consistent with background */
+}
+
+/* Hover state for all outlined buttons */
+.outlined-button:hover {
+  background-color: #e5f2f7; /* Very light background for hover */
+  color: #033e52; /* Slightly darker text */
+  border-color: #033e52; /* Slightly darker border */
+}
+
+
+
+
+
+/* ################ */
 .logo {
     width: 280px;        
     height: 64px;        
@@ -160,3 +204,52 @@ h3 {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+/* Style for legg til +  */
+#addDeviceModal {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+#addDeviceModal > div {
+  border: 1px solid #888;
+  max-width: 400px;
+  background: white;
+  padding: 30px 16px 20px 16px;
+  border-radius: 5px;
+  width: 70%;
+}
+#newDeviceForm > label,
+#newDeviceForm > input {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+#newDeviceForm > input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #888;
+}
+
+#newDeviceForm > button:nth-child(13) {
+  float: left;
+}
+#newDeviceForm > button:nth-child(14) {
+  float: right;
+} 
+
+
+@media (min-width: 320px) and (max-width: 431px) {
+  #addDeviceModal > div {
+    width: 80%;
+  }
+}
+
