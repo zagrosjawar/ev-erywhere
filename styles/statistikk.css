@@ -39,8 +39,22 @@
   object-fit: cover;
   object-position: 50% 90%;
   height: 12.54856rem;
+  border-radius: 0.5rem;
 }
 .stationimage-container {
   display: flex;
   justify-content: center;
+}
+
+.available-chargers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+.chargers-image {
+  width: 100%;
+  object-fit: cover;
+  object-position: 10% 30%;
 }
