@@ -1,0 +1,46 @@
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem;
+}
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #07494f;
+  background-color: white;
+  font-weight: 700;
+  height: 40px;
+  max-width: 60%;
+  padding: 10px 24px 10px 24px;
+  border: 1px solid #07494f;
+  border-radius: 10px;
+  margin-left: 10%;
+  margin-top: 2rem;
+}
+.station-header {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+.address,
+.station-name {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.grey-icon,
+.grey-h3 {
+  color: #605d64;
+}
+.station-image {
+  width: 80%;
+  object-fit: cover;
+  object-position: 50% 90%;
+  height: 12.54856rem;
+}
+.stationimage-container {
+  display: flex;
+  justify-content: center;
+}

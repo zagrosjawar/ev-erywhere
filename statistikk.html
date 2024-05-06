@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link type="text/css" rel="stylesheet" href="styles/styles.css" />
+    <link type="text/css" rel="stylesheet" href="styles/statistikk.css" />
     <link
       rel="stylesheet"
       media="screen and (min-width: 320px) and (max-width: 431px)"
@@ -20,8 +21,82 @@
   </head>
   <body>
     <button class="back-button">
-      <img src="TilbakePil.svg" alt="Arrow back" class="default-button" />
+      <svg
+        width="16"
+        height="12"
+        viewBox="0 0 16 12"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M14.3333 6H1M1 6L6 11M1 6L6 1"
+          stroke="#07494F"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      Tilbake
     </button>
-    <div class="content-container"></div>
+    <div class="content-container">
+      <div class="station-header">
+        <div class="station-name">
+          <svg
+            width="26"
+            height="26"
+            viewBox="0 0 26 26"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13 5.41665L7.58856 13.2879C7.26279 13.7617 7.09991 13.9987 7.10969 14.1956C7.11821 14.3671 7.20188 14.5262 7.33839 14.6303C7.49513 14.75 7.78264 14.75 8.35767 14.75H13V20.5833L18.4115 12.7121C18.7373 12.2382 18.9002 12.0013 18.8904 11.8044C18.8819 11.6329 18.7982 11.4738 18.6617 11.3696C18.505 11.25 18.2174 11.25 17.6424 11.25H13V5.41665Z"
+              stroke="#037E83"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M13 24.6666C19.4434 24.6666 24.6667 19.4433 24.6667 13C24.6667 6.55666 19.4434 1.33331 13 1.33331C6.55672 1.33331 1.33337 6.55666 1.33337 13C1.33337 19.4433 6.55672 24.6666 13 24.6666Z"
+              stroke="#037E83"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <h1>Circle K Fløien</h1>
+        </div>
+        <div class="address">
+          <svg
+            class="grey-icon"
+            width="12"
+            height="14"
+            viewBox="0 0 12 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 7.625C7.03553 7.625 7.875 6.78553 7.875 5.75C7.875 4.71447 7.03553 3.875 6 3.875C4.96447 3.875 4.125 4.71447 4.125 5.75C4.125 6.78553 4.96447 7.625 6 7.625Z"
+              stroke="#605D64"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M6 13.25C8.5 10.75 11 8.51142 11 5.75C11 2.98858 8.76142 0.75 6 0.75C3.23858 0.75 1 2.98858 1 5.75C1 8.51142 3.5 10.75 6 13.25Z"
+              stroke="#605D64"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <h3 class="grey-h3">Skanselien 18</h3>
+        </div>
+      </div>
+      <div class="stationimage-container">
+        <img
+          src="jean-christophe-gougeon-t8bDFvkhNQY-unsplash.jpg"
+          alt="Gas station"
+          class="station-image"
+        />
+      </div>
+    </div>
   </body>
 </html>
