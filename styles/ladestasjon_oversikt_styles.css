@@ -47,7 +47,7 @@
     padding: 10px 10px;
     align-items: center;
     gap: 35px;
-    margin: 22px 0px;
+    margin: 20px 0px;
 
     border-radius: 6px;
     background: #FFF;
@@ -68,4 +68,32 @@
 
 .bold {
     font-weight: 600;
+}
+
+.navBarKart svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin: 4px 20px;
+    border-radius: 100px;
+}
+
+.navBarKart div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBarKart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em auto;
+    bottom: 0;
+}
+
+.navKart {
+    background-color: #E6F3F2;
+    margin: 0 4.5em;
 }
