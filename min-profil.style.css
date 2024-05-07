@@ -140,3 +140,52 @@ h4 {
   flex-direction: column;
   align-items: center;
 }
+
+footer {
+  height: 105px;
+}
+
+/* Navbar */
+
+.navBar svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin: 2px 10px;
+}
+
+.navBar div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 1rem 0 1.5rem 0;
+  bottom: 0;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+}
+
+.navKart {
+  margin: 4px 3.5em;
+}
+
+.greenSVG {
+  background-color: #e6f3f2;
+  border-radius: 100px;
+  padding: 4px 15px;
+  margin-bottom: 2px;
+}
+
+.blackSVG {
+  background-color: white;
+  padding: 4px 15px;
+  margin-bottom: 2px;
+}
