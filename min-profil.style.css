@@ -141,6 +141,10 @@ h4 {
   align-items: center;
 }
 
+footer {
+  height: 105px;
+}
+
 /* Navbar */
 
 .navBar svg {
