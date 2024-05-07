@@ -2,6 +2,15 @@
 Pastes inn i styles etter hvert
 */
 
+body {
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* typography */
 button {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
