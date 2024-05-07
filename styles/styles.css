@@ -207,7 +207,6 @@ h3 {
 
 Ladestasjon_oversikt
 /* navigasjonsbar */
-/* ______________ */
 .navBar svg {
   width: 24px;
   height: 24px;
@@ -221,13 +220,21 @@ Ladestasjon_oversikt
   justify-content: center;
   align-items: center;
 }
+.navBar a {
+  color: #000000;
+  text-decoration: none;
+}
 
 .navBar {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1.5em auto;
+  margin: auto;
+  padding: 1rem 0 1.5rem 0;
   bottom: 0;
+  position: fixed;
+  background-color: white;
+  width: 100%;
 }
 
 .navKart {
@@ -235,7 +242,7 @@ Ladestasjon_oversikt
 }
 
 .greenSVG {
-  background-color: #E6F3F2;
+  background-color: #e6f3f2;
   border-radius: 100px;
   padding: 4px 15px;
   margin-bottom: 2px;
@@ -246,7 +253,11 @@ Ladestasjon_oversikt
   padding: 4px 15px;
   margin-bottom: 2px;
 }
-=======
+
+footer {
+  min-height: 105px;
+}
+
 
 /* Style for legg til +  */
 #addDeviceModal {
