@@ -1,0 +1,59 @@
+/* Lagde egen stylesheet for å unngå evt konflikter
+Pastes inn i styles etter hvert
+*/
+
+/* typography */
+button {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 2rem;
+  font-family: "Raleway", Arial, sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+h3,
+h4 {
+  font-size: 1rem;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+h4 {
+  font-weight: 600;
+}
+
+/* Containers */
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.container-small {
+  width: 90%;
+  margin: auto;
+  margin-top: 1rem;
+}
