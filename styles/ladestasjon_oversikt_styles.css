@@ -1,0 +1,71 @@
+#ladestasjonMainContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#ladestasjonerOverskrift {
+    margin-top: 90px;
+    margin-bottom: 26px;
+}
+
+#ladestasjonContainer {
+    display: flex;
+    width: 377px;
+    height: 608px;
+    padding: 17px 17px;
+    flex-shrink: 0;
+    flex-direction: column;
+
+    border-radius: 8px;
+    border: 1px solid var(--Primary-Lys, #7BCBC6);
+    background: #FFF;
+}
+
+#ladeContainerOverskrift {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 15px 50px;
+}
+
+.defaultKnapp {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5em;
+    background-color: #07494F;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 6px;
+}
+
+.ladestasjonKnapp {
+    display: flex;
+    padding: 10px 10px;
+    align-items: center;
+    gap: 35px;
+    margin: 20px 0px;
+
+    border-radius: 6px;
+    background: #FFF;
+    box-shadow: 0px 2px 6px 0px #83c5be80;
+}
+
+.ladestasjonKnapp p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.ikkeBold {
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: 600;
+}
