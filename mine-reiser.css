@@ -79,38 +79,40 @@ h4 {
 
 /* Buttons */
 
-.filled-button,
-.outlined-button {
+.filled-button-small,
+.outlined-button-small {
   display: inline-block;
   border-radius: 6px;
-  padding: 10px 24px;
+  padding: 8px 18px 8px 8px;
+  /* center button text */
+  text-align: center;
   cursor: pointer;
-  font-size: 16px; /* Adjust the font size as needed */
+  font-size: 14px; /* Adjust the font size as needed */
   transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover states */
 }
 
 /* Styles for all filled buttons */
-.filled-button {
+.filled-button-small {
   background-color: #07494f;
   color: white;
   border: 2px solid #07494f;
 }
 
 /* Styles for all outlined buttons */
-.outlined-button {
+.outlined-button-small {
   background-color: white;
   color: #07494f;
   border: 2px solid #07494f;
 }
 
 /* Hover state for all filled buttons */
-.filled-button:hover {
+.filled-button-small:hover {
   background-color: #055c6e; /* Slightly darker for hover */
   border-color: #055c6e; /* Consistent with background */
 }
 
 /* Hover state for all outlined buttons */
-.outlined-button:hover {
+.outlined-button-small:hover {
   background-color: #e5f2f7; /* Very light background for hover */
   color: #033e52; /* Slightly darker text */
   border-color: #033e52; /* Slightly darker border */
