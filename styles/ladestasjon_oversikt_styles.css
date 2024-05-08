@@ -12,11 +12,13 @@
 
 #ladestasjonContainer {
     display: flex;
-    width: 377px;
-    height: 608px;
+    width: 23.7em;
+    /* width: 377px; */
+    height: 100%;
     padding: 17px 17px;
     flex-shrink: 0;
     flex-direction: column;
+    margin-bottom: 7em;
 
     border-radius: 8px;
     border: 1px solid var(--Primary-Lys, #7BCBC6);
@@ -28,7 +30,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    gap: 15px 50px;
+    gap: 15px 30px;
 }
 
 .defaultKnapp {
@@ -44,9 +46,9 @@
 
 .ladestasjonKnapp {
     display: flex;
-    padding: 10px 10px;
+    padding: 15px 10px;
     align-items: center;
-    gap: 35px;
+    gap: 35px 20px;
     margin: 20px 0px;
 
     border-radius: 6px;
@@ -69,3 +71,4 @@
 .bold {
     font-weight: 600;
 }
+
