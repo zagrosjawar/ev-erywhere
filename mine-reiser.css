@@ -73,6 +73,56 @@ h4 {
   box-shadow: 0px 2px 6px 0px #83c5be80;
 }
 
-img {
+.map-img {
   border-radius: 12px 0px 0px 12px;
+}
+
+/* Buttons */
+
+.filled-button,
+.outlined-button {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 10px 24px;
+  cursor: pointer;
+  font-size: 16px; /* Adjust the font size as needed */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover states */
+}
+
+/* Styles for all filled buttons */
+.filled-button {
+  background-color: #07494f;
+  color: white;
+  border: 2px solid #07494f;
+}
+
+/* Styles for all outlined buttons */
+.outlined-button {
+  background-color: white;
+  color: #07494f;
+  border: 2px solid #07494f;
+}
+
+/* Hover state for all filled buttons */
+.filled-button:hover {
+  background-color: #055c6e; /* Slightly darker for hover */
+  border-color: #055c6e; /* Consistent with background */
+}
+
+/* Hover state for all outlined buttons */
+.outlined-button:hover {
+  background-color: #e5f2f7; /* Very light background for hover */
+  color: #033e52; /* Slightly darker text */
+  border-color: #033e52; /* Slightly darker border */
+}
+
+.profile-picture {
+  width: 5rem;
+  height: 5rem;
+}
+.profile-picture img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  border: 0.4rem solid white;
 }
