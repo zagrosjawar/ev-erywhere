@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link type="text/css" rel="stylesheet" href="styles/styles.css" />
+    <link type="text/css" rel="stylesheet" href="../styles/styles.css" />
     <link
       rel="stylesheet"
       media="screen and (min-width: 320px) and (max-width: 431px)"
@@ -23,7 +23,7 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link rel="stylesheet" href="mine-reiser.css" />
+    <link rel="stylesheet" href="../styles/mine-reiser.css" />
   </head>
   <body>
     <div class="container mx-auto mt-4 p-4">
@@ -233,7 +233,7 @@
         <div
           class="overflow-clip h-full bg-cover bg-center rounded-xl flex-1 flex"
         >
-          <img class="object-cover" src="map-image.png" />
+          <img class="object-cover" src="../assets/map-image.png" />
           <div class="flex-col ml-3 mr-3 flex-grow">
             <div class="flex">
               <h2 class="mt-4">Destinasjon</h2>
@@ -295,7 +295,7 @@
         <div class="flex flex-col">
           <div class="flex">
             <div class="profile-picture mr-2">
-              <img src="man.png" alt="Man smiling in a black shirt" />
+              <img src="../assets/man.png" alt="Man smiling in a black shirt" />
             </div>
             <div>
               <h3 class="mt-2">Ole Erik Halvorsen</h3>
@@ -306,12 +306,12 @@
           <div class="flex flex-col post-content">
             <div class="flex w-full mt-4 gap-2">
               <img
-                src="flower-image2.png"
+                src="../assets/flower-image2.png"
                 class="rounded-xl w-full"
                 alt="hund som ligger på en stein i blomstereng"
               />
               <img
-                src="dog-image2.png"
+                src="../assets/dog-image2.png"
                 class="rounded-xl w-full"
                 alt="asfaltert vei med rhododendron busker langs veien"
               />
@@ -324,7 +324,7 @@
           </div>
           <hr class="mt-12" />
           <div class="flex mt-2">
-            <img class="rounded-xl w-28" src="maps-arboretet.png" />
+            <img class="rounded-xl w-28" src="../assets/maps-arboretet.png" />
             <div class="ml-4">
               <h2>Arboretet</h2>
               <div>Fra: Slåtthaugsvegen 18</div>
@@ -335,6 +335,76 @@
         </div>
       </div>
     </div>
+    <footer></footer>
+    <!-- Navigasjonsbar -->
+    <div class="navBar">
+      <a href="min-profil.html"
+        ><div class="navMinProfil">
+          <div class="blackSVG">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="24"
+              viewBox="0 0 25 24"
+              fill="none"
+            >
+              <path
+                d="M5.48304 19.4384C6.09137 18.0052 7.51167 17 9.16675 17H15.1667C16.8218 17 18.2421 18.0052 18.8504 19.4384M16.1667 9.5C16.1667 11.7091 14.3759 13.5 12.1667 13.5C9.95761 13.5 8.16675 11.7091 8.16675 9.5C8.16675 7.29086 9.95761 5.5 12.1667 5.5C14.3759 5.5 16.1667 7.29086 16.1667 9.5ZM22.1667 12C22.1667 17.5228 17.6896 22 12.1667 22C6.6439 22 2.16675 17.5228 2.16675 12C2.16675 6.47715 6.6439 2 12.1667 2C17.6896 2 22.1667 6.47715 22.1667 12Z"
+                stroke="#1B1D20"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <p>Min Profil</p>
+        </div></a
+      >
+      <a href=""
+        ><div class="navKart">
+          <div class="blackSVG">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="24"
+              viewBox="0 0 25 24"
+              fill="none"
+            >
+              <path
+                d="M9.50001 18L2.50001 22V6L9.50001 2M9.50001 18L16.5 22M9.50001 18V2M16.5 22L22.5 18V2L16.5 6M16.5 22V6M16.5 6L9.50001 2"
+                stroke="#322F35"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <p>Kart</p>
+        </div></a
+      >
+      <div class="navMineReiser">
+        <div class="greenSVG">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="24"
+            viewBox="0 0 25 24"
+            fill="none"
+          >
+            <path
+              d="M12.3333 5H12.7677C15.815 5 17.3386 5 17.917 5.54729C18.4169 6.02037 18.6385 6.71728 18.5035 7.39221C18.3474 8.17302 17.1034 9.05285 14.6156 10.8125L10.5511 13.6875C8.06325 15.4471 6.81933 16.327 6.66318 17.1078C6.5282 17.7827 6.74976 18.4796 7.24971 18.9527C7.82808 19.5 9.3517 19.5 12.3989 19.5H13.3333M8.83334 5C8.83334 6.65685 7.4902 8 5.83334 8C4.17649 8 2.83334 6.65685 2.83334 5C2.83334 3.34315 4.17649 2 5.83334 2C7.4902 2 8.83334 3.34315 8.83334 5ZM22.8333 19C22.8333 20.6569 21.4902 22 19.8333 22C18.1765 22 16.8333 20.6569 16.8333 19C16.8333 17.3431 18.1765 16 19.8333 16C21.4902 16 22.8333 17.3431 22.8333 19Z"
+              stroke="#037E83"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <p>Mine reiser</p>
+      </div>
+      <div></div>
+    </div>
+
     <script src="https://cdn.tailwindcss.com"></script>
   </body>
 </html>
