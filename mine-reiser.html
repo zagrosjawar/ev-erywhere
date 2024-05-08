@@ -230,11 +230,13 @@
         <h3 class="text-base">Gjenoppta forrige rute</h3>
       </div>
       <div class="w-full green-shadow rounded-xl flex relative">
-        <div class="overflow-clipx h-full bg-cover bg-center rounded-xl flex">
+        <div
+          class="overflow-clipx h-full bg-cover bg-center rounded-xl flex-1 flex"
+        >
           <img class="object-cover" src="map-image.png" />
-          <div class="flex-col ml-3">
+          <div class="flex-col ml-3 mr-3 flex-grow">
             <div class="flex">
-              <h2 class="mt-4" style="border: 1px solid red">Destinasjon</h2>
+              <h2 class="mt-4">Destinasjon</h2>
               <div class="absolute right-6 top-5">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -253,14 +255,9 @@
                 </svg>
               </div>
             </div>
-            <div class="text-sm" style="border: 1px solid red">
-              Startpunkt: hjem
-            </div>
-            <div class="text-sm" style="border: 1px solid red">1 stopp</div>
-            <div
-              class="flex w-full justify-between"
-              style="border: 1px solid red"
-            >
+            <div class="text-sm">Startpunkt: hjem</div>
+            <div class="text-sm">1 stopp</div>
+            <div class="flex w-full justify-between">
               <div class="text-sm">48 km</div>
               <div class="text-sm">1 time 14 min</div>
             </div>
