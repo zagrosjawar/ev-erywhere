@@ -1,3 +1,5 @@
+# API Endpoint for Highcharts
+
 import json
 from flask import Flask, jsonify
 app = Flask(__name__)
