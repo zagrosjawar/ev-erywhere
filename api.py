@@ -4,7 +4,8 @@ app = Flask(__name__)
 @app.route('/api/data', methods=['GET'])
 
 def data_til_highcharts():
-    data: []
+    ranges: []
+    averages: []
     
 def data_til_filter():
 
