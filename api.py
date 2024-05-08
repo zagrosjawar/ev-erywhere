@@ -7,4 +7,6 @@ def data_til_highcharts():
     data: []
     
 def data_til_filter():
-app.run()
+
+if __name__ == '__main__':
+    app.run(debug=True)
