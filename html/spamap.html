@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+    <!-- links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link type="text/css" rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/map_styles.css" />
+    
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 320px) and (max-width: 431px)"
+      href="../styles/mobile-style.css"
+    />
+
+</head>
+<body>
+    <!-- embedding Google Maps in my Web Page-->
+    <div id="map"></div>
+
+    <!-- Button to show charging stations page-->
+    <button id="showStationsBtn" onclick="showStations()">⚡</button>
+    <div id="stationsPanel" class="stationsPanel" style="display: none;">
+      <iframe id="stationsFrame" src="#" style="width:100%; height:100%; border:none;"></iframe>
+    </div>
+
+    <div id="routeForm">
+      <p>Hvor skal du?</p>
+        <label for="from">Fra:</label>
+        <input type="text" id="from" placeholder="Min posisjon">
+
+        <label for="stops">Legg til stopp:</label>
+        <input type="text" id="stops" placeholder="+">
+
+        <label for="to">Til:</label>
+        <input type="text" id="to" placeholder="Destinasjon">
+
+        <button onclick="findRoute()">Finn rute</button>
+    </div>
+
+    <div id="navigationPanel" style="display: none;">
+        <div id="recommendedRoute">
+            <p>Anbefalt rute: <span id="routeDistance"></span> (<span id="routeTime"></span>)</p>
+            <p>Stop (1): <span id="nextChargeStation"></span> / <span id="nextChargeTime"></span></p>
+            <a href="statistikk.html">Statistikk</a>
+        </div>
+        <button onclick="startNavigation()">Start</button>
+    </div>
+
+
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeYKcxfNEqXMVxghIIk7PzPl-4vJW3BE4&callback=initMap">
+    </script>
+    
+    <script src="../scripts/map.js"></script>
+</body>
+</html>

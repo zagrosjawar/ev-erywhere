@@ -1,0 +1,91 @@
+/* Styles for the Single Page Applicaton */
+/* map */
+
+#map {
+    position: relative;
+    height: 70%;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Button for showing stations */
+#showStationsBtn {
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    width: 50px;
+    padding: 10px 15px;
+    font-size: 24px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2; /* Higher than map but lower than the panel */
+}
+
+#showStationsBtn:hover {
+    background-color: #3b472d;
+}
+
+/* Overlay panel for stations, using fixed positioning to cover the viewport */
+.stationsPanel {
+    position: fixed;
+    top: 115px;
+    left: 75px;
+    width: 80%;
+    height: 81%;
+    background: white;
+    z-index: 3; /* Ensure this is the highest in context */
+    display: none; /* Hidden by default */
+}
+
+#stationsFrame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*      Navigation Panel Styles      */
+#routeForm, #navigationPanel, #bottomNav {
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#bottomNav button {
+    width: 33.33%;
+}
+
+#navigationPanel {
+    display: none; /* Hidden by default */
+}
