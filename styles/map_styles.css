@@ -34,7 +34,7 @@
     top: 115px;
     left: 75px;
     width: 80%;
-    height: 81%;
+    height: 85%;
     background: white;
     z-index: 3; /* Ensure this is the highest in context */
     display: none; /* Hidden by default */
@@ -45,16 +45,6 @@
     height: 100%;
     border: none;
 }
-
-
-
-
-
-
-
-
-
-
 
 /*      Navigation Panel Styles      */
 #routeForm, #navigationPanel, #bottomNav {
@@ -69,18 +59,33 @@ input[type="text"] {
     box-sizing: border-box;
 }
 
-button {
-    width: 100%;
+.filled-button {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+.stops-input {
+    width: calc(100% - 22px);
     padding: 10px;
-    background-color: #007BFF;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.remove-stop-button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #ff4d4d; /* Red color for removal indication */
     color: white;
     border: none;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #0056b3;
+.remove-stop-button:hover {
+    background-color: #ff1a1a;
 }
+
 
 #bottomNav button {
     width: 33.33%;
