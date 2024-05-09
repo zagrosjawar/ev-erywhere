@@ -37,13 +37,14 @@
         <label for="from">Fra:</label>
         <input type="text" id="from" placeholder="Min posisjon">
 
-        <label for="stops">Legg til stopp:</label>
-        <input type="text" id="stops" placeholder="+">
+        <div id="stopsContainer">
+          <button class="outlined-button" type="button" id="stops" onclick="addStop()">Legg til stop +</button>
+      </div>
 
         <label for="to">Til:</label>
         <input type="text" id="to" placeholder="Destinasjon">
 
-        <button onclick="findRoute()">Finn rute</button>
+        <button class="filled-button" onclick="findRoute()">Finn rute</button>
     </div>
 
     <div id="navigationPanel" style="display: none;">
@@ -57,8 +58,10 @@
 
 
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeYKcxfNEqXMVxghIIk7PzPl-4vJW3BE4&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeYKcxfNEqXMVxghIIk7PzPl-4vJW3BE4&callback=initMap&libraries=places">
     </script>
+    
+
     
     <script src="../scripts/map.js"></script>
 </body>
