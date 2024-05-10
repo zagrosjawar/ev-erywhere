@@ -52,66 +52,85 @@ averages = [
   [1],
 ];
 
-Highcharts.chart("stats", {
-  title: {
-    text: "Circle K Fløen",
-    align: "left",
-  },
+// Begynner med å fetche api-en som e lagd
+fetch("https://api.npoint.io/8fb38d349fb095d412e2")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json(); // tar json inn og returnerer promise
+  })
+  .then((data) => {
+    // jobber videre med json, skjer når response er returnert
+    updateHighChart(data);
+  })
+  .catch((error) => {
+    console.error("There has been a problem with your fetch operation:", error); // legger inn feilmelding
+  });
 
-  subtitle: {},
-
-  xAxis: {
-    type: "datetime",
-    dateTimeLabelFormats: {
-      hour: "%H:%M",
-    },
-    tickInterval: 3600 * 1000, // 1 hour in milliseconds
-    labels: {
-      format: "{value:%H:%M}", // Display hours and minutes on the x-axis labels
-    },
-  },
-
-  yAxis: {
+function updateHighChart(data) {
+  //funksjon for å oppdatere Highchartsen etter api-en
+  Highcharts.chart("stats", {
     title: {
-      text: null,
+      text: "Circle K Fløen",
+      align: "left",
     },
-  },
 
-  tooltip: {
-    crosshairs: true,
-    shared: true,
-  },
+    subtitle: {},
 
-  plotOptions: {
-    series: {
-      pointStart: Date.UTC(2022, 6, 1, 0, 0, 0), // Start at midnight
-      pointInterval: 3600 * 1000, // 1 hour in milliseconds
-    },
-  },
-
-  series: [
-    {
-      name: "Opptatte Ladestasjoner",
-      data: averages,
-      zIndex: 1,
-      marker: {
-        fillColor: "white",
-        lineWidth: 2,
-        lineColor: Highcharts.getOptions().colors[9],
+    xAxis: {
+      type: "datetime",
+      dateTimeLabelFormats: {
+        hour: "%H:%M",
+      },
+      tickInterval: 3600 * 1000, // 1 hour in milliseconds
+      labels: {
+        format: "{value:%H:%M}", // Display hours and minutes on the x-axis labels
       },
     },
-    {
-      name: "Range",
-      data: ranges,
-      type: "arearange",
-      lineWidth: 0,
-      linkedTo: ":previous",
-      color: Highcharts.getOptions().colors[0],
-      fillOpacity: 0.3,
-      zIndex: 0,
-      marker: {
-        enabled: false,
+
+    yAxis: {
+      title: {
+        text: null,
       },
     },
-  ],
-});
+
+    tooltip: {
+      crosshairs: true,
+      shared: true,
+    },
+
+    plotOptions: {
+      series: {
+        pointStart: Date.UTC(2022, 6, 1, 0, 0, 0), // Start at midnight
+        pointInterval: 3600 * 1000, // 1 hour in milliseconds
+      },
+    },
+
+    series: [
+      {
+        name: "Opptatte Ladestasjoner",
+        data: data.data.averages,
+        zIndex: 1,
+        marker: {
+          fillColor: "white",
+          lineWidth: 2,
+          lineColor: Highcharts.getOptions().colors[9],
+        },
+      },
+      {
+        name: "Range",
+        data: data.data.ranges,
+        type: "arearange",
+        lineWidth: 0,
+        linkedTo: ":previous",
+        color: Highcharts.getOptions().colors[0],
+        fillOpacity: 0.3,
+        zIndex: 0,
+        marker: {
+          enabled: false,
+        },
+      },
+    ],
+  });
+}
