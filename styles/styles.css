@@ -57,7 +57,7 @@ h3 {
 
 /* style that apply to all buttons filled and outlined buttons*/
 /* Button styles  */
-.filled-button, 
+.filled-button,
 .outlined-button {
   display: inline-block;
   border-radius: 6px;
@@ -69,15 +69,15 @@ h3 {
 
 /* Styles for all filled buttons */
 .filled-button {
-  background-color: #07494f; 
-  color: white; 
+  background-color: #07494f;
+  color: white;
   border: 2px solid #07494f;
 }
 
 /* Styles for all outlined buttons */
 .outlined-button {
   background-color: white;
-  color: #07494f; 
+  color: #07494f;
   border: 2px solid #07494f;
 }
 
@@ -94,32 +94,28 @@ h3 {
   border-color: #033e52; /* Slightly darker border */
 }
 
-
-
-
-
 /* ################ */
 .logo {
-    width: 280px;        
-    height: 64px;        
-    margin-top: 114px; 
-    margin-bottom: 20px;  
-    margin-left: auto;
-    margin-right: auto;
-    display: block;      /* Ensures the margins apply correctly */
-    object-fit: contain; /* Keeps aspect ratio within the given dimensions */
+  width: 280px;
+  height: 64px;
+  margin-top: 114px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block; /* Ensures the margins apply correctly */
+  object-fit: contain; /* Keeps aspect ratio within the given dimensions */
 }
 
 .bluetooth-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
 }
 
-.bluetooth-section  h2,
-.bluetooth-section  h3 {
-    text-align: center;
-    font-weight: normal;
+.bluetooth-section h2,
+.bluetooth-section h3 {
+  text-align: center;
+  font-weight: normal;
 }
 .bluetooth-container {
   display: flex;
@@ -205,8 +201,6 @@ h3 {
   margin-right: auto;
 }
 
-
-Ladestasjon_oversikt
 /* navigasjonsbar */
 .navBar svg {
   width: 24px;
@@ -236,6 +230,7 @@ Ladestasjon_oversikt
   position: fixed;
   background-color: white;
   width: 100%;
+  overflow: hidden;
 }
 
 .navKart {
@@ -258,7 +253,16 @@ Ladestasjon_oversikt
 footer {
   min-height: 105px;
 }
-
+/* Desktop */
+@media (min-width: 980px) {
+  body {
+    max-width: 768px;
+    margin: auto;
+  }
+  .navBar {
+    max-width: 768px;
+  }
+}
 
 /* Style for legg til +  */
 #addDeviceModal {
@@ -298,8 +302,7 @@ footer {
 }
 #newDeviceForm > button:nth-child(14) {
   float: right;
-} 
-
+}
 
 @media (min-width: 320px) and (max-width: 431px) {
   #addDeviceModal > div {
