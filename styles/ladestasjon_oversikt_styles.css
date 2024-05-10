@@ -6,13 +6,13 @@
 }
 
 #ladestasjonerOverskrift {
-    margin-top: 90px;
+    margin-top: 30px;
     margin-bottom: 26px;
 }
 
 #ladestasjonContainer {
     display: flex;
-    width: 23.7em;
+    width: 80%;
     /* width: 377px; */
     height: 100%;
     padding: 17px 17px;
