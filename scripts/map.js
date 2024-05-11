@@ -89,9 +89,6 @@ function initMap() {
     directionsRenderer = new google.maps.DirectionsRenderer();
     directionsRenderer.setMap(map);
 
-    trackUserLocation(); // Start tracking user/car location
-
-
     // Setting up the places service for EV charging stations
     const request = {
         location: bergen,
