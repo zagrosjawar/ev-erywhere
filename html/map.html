@@ -20,8 +20,6 @@
       media="screen and (min-width: 320px) and (max-width: 431px)"
       href="../styles/mobile-style.css"
     />
-   
-
 </head>
 <body>
     <!-- embedding Google Maps in my Web Page-->
@@ -42,8 +40,11 @@
           <img src="../assets/current-location.svg" alt="Current Location" id="currentLocationButton" style="cursor: pointer;">
       </div>
         <div id="stopsContainer">
-          <button class="outlined-button" type="button" id="stops" onclick="addStop()">Legg til stop +</button>
-      </div><br>
+          <button type="button" id="stops" onclick="addStop()">
+            Legg til stop
+            <img src="../assets/plus_icon.svg" alt="Add" style="vertical-align: middle;">
+          </button>
+        </div><br>
 
         <label for="to">Til:</label><br>
         <input type="text" id="to" placeholder="Destinasjon">
