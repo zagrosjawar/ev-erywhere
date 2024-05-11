@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link type="text/css" rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/statistikk.css">
     <link
       rel="stylesheet"
       media="screen and (min-width: 320px) and (max-width: 431px)"
@@ -20,8 +21,24 @@
     <link rel="stylesheet" href="../styles/ladestasjon_oversikt_styles.css" />
   </head>
   <body>
+    <button class="back-button">
+      <svg
+        width="16"
+        height="12"
+        viewBox="0 0 16 12"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M14.3333 6H1M1 6L6 11M1 6L6 1"
+          stroke="#07494F"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+      Tilbake
+    </button>
     <div id="ladestasjonMainContent">
-      <h1 id="ladestasjonerOverskrift" class="ikkeBold">Ladestasjoner</h1>
+      <h1 id="ladestasjonerOver skrift" class="ikkeBold">Ladestasjoner</h1>
       <div id="ladestasjonContainer">
         <div id="ladeContainerOverskrift">
           <h3 class="ikkeBold">Mindre enn 10 km unna</h3>
@@ -45,7 +62,7 @@
           </button>
         </div>
         <div>
-          <div class="ladestasjonKnapp">
+          <div class="ladestasjonKnapp" onclick="window.location.href = '../html/statistikk.html';">
             <p>
               Ladestasjon<svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +77,7 @@
             <p>0 km / 0 min</p>
             <p class="bold">Statistikk</p>
           </div>
-          <div class="ladestasjonKnapp">
+          <div class="ladestasjonKnapp" onclick="window.location.href = '../html/statistikk.html';">
             <p>
               Ladestasjon<svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +92,7 @@
             <p>0 km / 0 min</p>
             <p class="bold">Statistikk</p>
           </div>
-          <div class="ladestasjonKnapp">
+          <div class="ladestasjonKnapp" onclick="window.location.href = '../html/statistikk.html';">
             <p>
               Ladestasjon<svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +107,7 @@
             <p>0 km / 0 min</p>
             <p class="bold">Statistikk</p>
           </div>
-          <div class="ladestasjonKnapp">
+          <div class="ladestasjonKnapp" onclick="window.location.href = '../html/statistikk.html';">
             <p>
               Ladestasjon<svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +123,7 @@
             <p class="bold">Statistikk</p>
           </div>
           <div><h3 class="ikkeBold">Mindre enn 10 km unna</h3></div>
-          <div class="ladestasjonKnapp">
+          <div class="ladestasjonKnapp" onclick="window.location.href = '../html/statistikk.html';">
             <p>
               Ladestasjon<svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +138,7 @@
             <p>0 km / 0 min</p>
             <p class="bold">Statistikk</p>
           </div>
-          <div class="ladestasjonKnapp">
+          <div class="ladestasjonKnapp" onclick="window.location.href = '../html/statistikk.html';">
             <p>
               Ladestasjon<svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -136,7 +153,7 @@
             <p>0 km / 0 min</p>
             <p class="bold">Statistikk</p>
           </div>
-          <div class="ladestasjonKnapp">
+          <div class="ladestasjonKnapp" onclick="window.location.href = '../html/statistikk.html';">
             <p>
               Ladestasjon<svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -151,7 +168,7 @@
             <p>0 km / 0 min</p>
             <p class="bold">Statistikk</p>
           </div>
-          <div class="ladestasjonKnapp">
+          <div class="ladestasjonKnapp" onclick="window.location.href = '../html/statistikk.html';">
             <p>
               Ladestasjon<svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -234,7 +251,8 @@
             </svg>
           </div>
           <p>Mine reiser</p>
-        </div></a
-      > -->
+        </div></a> -->
+    </div>
+    <script src="../scripts/ladestasjon_oversikt.js"></script>
   </body>
 </html>

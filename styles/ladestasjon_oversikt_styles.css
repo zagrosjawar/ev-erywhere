@@ -7,14 +7,13 @@
 }
 
 #ladestasjonerOverskrift {
-    margin-top: 90px;
+    margin-top: 30px;
     margin-bottom: 26px;
 }
 
 #ladestasjonContainer {
     display: flex;
-    width: 23.7em;
-    /* width: 377px; */
+    width: 80%;
     height: 100%;
     padding: 17px 17px;
     flex-shrink: 0;
@@ -55,6 +54,10 @@
     border-radius: 6px;
     background: #FFF;
     box-shadow: 0px 2px 6px 0px #83c5be80;
+}
+
+.ladestasjonKnapp:hover {
+    background-color: #DBF7F4;
 }
 
 .ladestasjonKnapp p {
