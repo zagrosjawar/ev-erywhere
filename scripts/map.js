@@ -233,47 +233,4 @@ function calculateDistanceToStation(stationLocation, nearPoint, callback) {
     });
 }
 
-
-
-
-// Function to track the user's location and update the marker on the map
-function trackUserLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.watchPosition(function(position) {
-            const pos = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
-
-            if (!userLocationMarker) {
-                // If the marker doesn't exist, create it.
-                userLocationMarker = new google.maps.Marker({
-                    position: pos,
-                    map: map,
-                    title: 'Your Location',
-                    icon: {
-                        path: "../assets/car-icon-large.svg",
-                        scale: 10,
-                        fillColor: '#4285F4',
-                        fillOpacity: 1,
-                        strokeColor: '#FFFFFF',
-                        strokeWeight: 2
-                    }
-                });
-            } else {
-                // If the marker exists, just update its position.
-                userLocationMarker.setPosition(pos);
-            }
-
-            map.setCenter(pos); // Center the map on the user's location
-        }, function(error) {
-            console.error('Error fetching geolocation: ', error);
-        }, {
-            enableHighAccuracy: true, // Provides a hint that the application needs the best possible results
-            maximumAge: 30000, // Accept a cached position whose age is no greater than the specified time in milliseconds
-            timeout: 27000 // The maximum length of time (in milliseconds) the device is allowed to take in order to return a position
-        });
-    } else {
-        alert('Geolocation is not supported by this browser.');
-    }
-}
+  
