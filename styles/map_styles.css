@@ -32,12 +32,13 @@
 .stationsPanel {
     position: fixed;
     top: 115px;
-    left: 75px;
-    width: 80%;
+    left: 50px;
+    width: 90%;
     height: 85%;
     background: white;
     z-index: 3; /* Ensure this is the highest in context */
     display: none; /* Hidden by default */
+    border: 1px solid black;
 }
 
 #stationsFrame {

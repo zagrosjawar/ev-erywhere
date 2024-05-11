@@ -69,6 +69,9 @@ let service;
 let infowindow;
 let directionsService;
 let directionsRenderer;
+let userLocationMarker = null;
+
+
 
 function initMap() {
     const bergen = new google.maps.LatLng(60.3913, 5.3221);  // Example: Bergen, Norway
@@ -78,10 +81,16 @@ function initMap() {
         zoom: 15
     });
 
+    // track user location
+    
+
     infowindow = new google.maps.InfoWindow();
     directionsService = new google.maps.DirectionsService();
     directionsRenderer = new google.maps.DirectionsRenderer();
     directionsRenderer.setMap(map);
+
+    trackUserLocation(); // Start tracking user/car location
+
 
     // Setting up the places service for EV charging stations
     const request = {
@@ -227,3 +236,44 @@ function calculateDistanceToStation(stationLocation, nearPoint, callback) {
 
 
 
+// Function to track the user's location and update the marker on the map
+function trackUserLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(function(position) {
+            const pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
+            if (!userLocationMarker) {
+                // If the marker doesn't exist, create it.
+                userLocationMarker = new google.maps.Marker({
+                    position: pos,
+                    map: map,
+                    title: 'Your Location',
+                    icon: {
+                        path: "../assets/car-icon-large.svg",
+                        scale: 10,
+                        fillColor: '#4285F4',
+                        fillOpacity: 1,
+                        strokeColor: '#FFFFFF',
+                        strokeWeight: 2
+                    }
+                });
+            } else {
+                // If the marker exists, just update its position.
+                userLocationMarker.setPosition(pos);
+            }
+
+            map.setCenter(pos); // Center the map on the user's location
+        }, function(error) {
+            console.error('Error fetching geolocation: ', error);
+        }, {
+            enableHighAccuracy: true, // Provides a hint that the application needs the best possible results
+            maximumAge: 30000, // Accept a cached position whose age is no greater than the specified time in milliseconds
+            timeout: 27000 // The maximum length of time (in milliseconds) the device is allowed to take in order to return a position
+        });
+    } else {
+        alert('Geolocation is not supported by this browser.');
+    }
+}
