@@ -79,10 +79,7 @@ function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
         center: bergen,
         zoom: 15
-    });
-
-    // track user location
-    
+    });    
 
     infowindow = new google.maps.InfoWindow();
     directionsService = new google.maps.DirectionsService();
