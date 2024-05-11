@@ -48,6 +48,7 @@ h4 {
   width: 90%;
   margin: auto;
   margin-top: 1rem;
+  margin-bottom:80px;
 }
 
 .header-img {
@@ -146,7 +147,7 @@ footer {
 }
 
 /* Navbar */
-
+/* 
 .navBar svg {
   width: 24px;
   height: 24px;
@@ -188,4 +189,4 @@ footer {
   background-color: white;
   padding: 4px 15px;
   margin-bottom: 2px;
-}
+} */

@@ -302,10 +302,3 @@ footer {
 }
 #newDeviceForm > button:nth-child(14) {
   float: right;
-}
-
-@media (min-width: 320px) and (max-width: 431px) {
-  #addDeviceModal > div {
-    width: 80%;
-  }
-}

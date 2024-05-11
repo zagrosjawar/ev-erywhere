@@ -69,6 +69,9 @@ let service;
 let infowindow;
 let directionsService;
 let directionsRenderer;
+let userLocationMarker = null;
+
+
 
 function initMap() {
     const bergen = new google.maps.LatLng(60.3913, 5.3221);  // Example: Bergen, Norway
@@ -78,10 +81,16 @@ function initMap() {
         zoom: 15
     });
 
+    // track user location
+    
+
     infowindow = new google.maps.InfoWindow();
     directionsService = new google.maps.DirectionsService();
     directionsRenderer = new google.maps.DirectionsRenderer();
     directionsRenderer.setMap(map);
+
+    trackUserLocation(); // Start tracking user/car location
+
 
     // Setting up the places service for EV charging stations
     const request = {
@@ -224,6 +233,4 @@ function calculateDistanceToStation(stationLocation, nearPoint, callback) {
     });
 }
 
-
-
-
+  
