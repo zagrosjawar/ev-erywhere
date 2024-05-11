@@ -201,7 +201,7 @@ h3 {
   margin-right: auto;
 }
 
-/* navigasjonsbar */
+/* navigasjonsbar
 .navBar svg {
   width: 24px;
   height: 24px;
@@ -248,7 +248,7 @@ h3 {
   background-color: white;
   padding: 4px 15px;
   margin-bottom: 2px;
-}
+} */
 
 footer {
   min-height: 105px;
@@ -302,3 +302,4 @@ footer {
 }
 #newDeviceForm > button:nth-child(14) {
   float: right;
+}
