@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   setTimeout(() => {
                       // set the status to "Tilkoblet"
                       status.textContent = 'Tilkoblet';
-                      target.style.backgroundColor = "#7BCBC6";
+                      target.style.backgroundColor = "#B4EFE7";
                   }, 2000);
               } else {
                   // set the status to "Ikke tilkoblet"
