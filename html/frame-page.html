@@ -28,17 +28,28 @@
             transition: background-color 0.3s; /* Smooth transition for background color */
             cursor: pointer; /* Change cursor to pointer to indicate clickable */
             background-color: transparent; /* Set the background color to transparent */
-        }
-
-        .nav-btn:hover, .nav-btn.active {
-            background-color: #83C5BE; /* Highlight on hover and when active */
+            margin-bottom: 16px;
         }
 
         .nav-btn img {
             width: 30px;
             height: 30px;
+            padding: 4px 20px 4px 20px;
+            border-radius: 25px;
             margin-bottom: 5px; /* Space between the icon and text */
         }
+
+        #navbar > button.nav-btn > img:hover {
+            color: #83C5BE; /* Change text color when active */
+            background-color: #83C5BE;
+            padding: 4px 20px 4px 20px;
+            border-radius: 25px;
+        }
+
+        #navbar > button.nav-btn.active > img {
+            background-color: rgba(131, 197, 190, 0.4);
+        }
+
 
         /* Styles for the iframe container */
         #content {
