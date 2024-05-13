@@ -17,9 +17,7 @@ function showStations() {
 }
 
 // user location
-document
-  .getElementById("currentLocationButton")
-  .addEventListener("click", function () {
+document.getElementById("currentLocationButton").addEventListener("click", function () {
     if (navigator.geolocation) {
         // Change from getCurrentPosition to watchPosition
         navigator.geolocation.watchPosition(function(position) {
@@ -45,7 +43,7 @@ document
         });
 
     } else {
-      alert("Geolocation is not supported by this browser.");
+    alert("Geolocation is not supported by this browser.");
     }
 
 });
