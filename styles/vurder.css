@@ -1,0 +1,142 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 2rem;
+  font-family: "Raleway", Arial, sans-serif;
+}
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+h1 {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 600;
+}
+h2 {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 400;
+}
+h3 {
+  font-size: 1rem; /* 16px */
+  font-weight: 400;
+}
+h4 {
+  font-size: 1rem; /* 16px */
+  font-weight: 600;
+}
+.maincontent {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 80px 0px;
+    gap: 2rem;
+}
+.review-box {
+  border-radius: 6px;
+  border: 1px solid #07494f;
+  padding: 0.5rem;
+  width: 70%;
+}
+.picture-button {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0px 2px 6px 0px #83c5be80;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+.outlined-button-small {
+  background-color: white;
+  color: #07494f;
+  border: 2px solid #07494f;
+  display: inline-block;
+  border-radius: 6px;
+  padding: 12px 20px;
+  min-width: 100px;
+  /* center button text */
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px; /* Adjust the font size as needed */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover states */
+}
+.outlined-button-small:hover {
+  background-color: #e5f2f7; /* Very light background for hover */
+  color: #033e52; /* Slightly darker text */
+  border-color: #033e52; /* Slightly darker border */
+}
+.button-content {
+  display: flex;
+  gap: 0.5rem;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1.8rem;
+}
+.dark-button {
+  display: flex;
+  width: 40%;
+  padding: 0.7rem 0.4rem;
+  justify-content: center;
+  border-radius: 0.375rem;
+  color: white;
+  background: var(--Primary-P-hvit, #07494f);
+}
+
+.dark-button:hover {
+  background-color: #105f66;
+}
+
+.navBar svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin: 2px 10px;
+}
+
+.navBar div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navBar a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 1rem 0 1.5rem 0;
+  bottom: 0;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  overflow: hidden;
+}
+
+.navKart {
+  margin: 4px 3.5em;
+}
+
+.greenSVG {
+  background-color: #e6f3f2;
+  border-radius: 100px;
+  padding: 4px 15px;
+  margin-bottom: 2px;
+}
+
+.blackSVG {
+  background-color: white;
+  padding: 4px 15px;
+  margin-bottom: 2px;
+}

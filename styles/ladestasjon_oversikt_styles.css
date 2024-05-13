@@ -50,6 +50,7 @@
     align-items: center;
     gap: 35px 20px;
     margin: 20px 0px;
+    justify-content: space-between;
 
     border-radius: 6px;
     background: #FFF;
@@ -58,6 +59,14 @@
 
 .ladestasjonKnapp:hover {
     background-color: #DBF7F4;
+}
+
+.avstandInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    gap: 50px;
 }
 
 .ladestasjonKnapp p {

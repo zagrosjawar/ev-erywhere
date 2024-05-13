@@ -159,7 +159,7 @@ h3 {
 
 .device-list li:active,
 .continue-button:active {
-  background: #7bcbc6;
+  background: #b4f5f0;
   transform: scale(0.98);
 }
 
