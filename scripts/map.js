@@ -21,31 +21,65 @@ document
   .getElementById("currentLocationButton")
   .addEventListener("click", function () {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        function (position) {
-          const lat = position.coords.latitude;
-          const lng = position.coords.longitude;
+        // Change from getCurrentPosition to watchPosition
+        navigator.geolocation.watchPosition(function(position) {
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
+            const latlng = {lat, lng};
 
-          // Optionally, use reverse geocoding to get a readable address
-          const geocoder = new google.maps.Geocoder();
-          const latlng = { lat, lng };
-          geocoder.geocode({ location: latlng }, function (results, status) {
-            if (status === "OK" && results[0]) {
-              document.getElementById("from").value =
-                results[0].formatted_address;
-            } else {
-              alert("Geocoder failed due to: " + status);
-            }
-          });
-        },
-        function () {
-          alert("Error getting location");
-        }
-      );
+            updateLocationMarker(latlng);  // Update the location marker on the map
+
+            // Optionally, update the 'from' input field with the current address
+            const geocoder = new google.maps.Geocoder();
+            geocoder.geocode({ 'location': latlng }, function(results, status) {
+                if (status === 'OK' && results[0]) {
+                    document.getElementById('from').value = results[0].formatted_address;
+                }
+            });
+        }, function() {
+            alert('Error getting location');
+        }, {
+            enableHighAccuracy: true,
+            maximumAge: 0,
+            timeout: Infinity
+        });
+
     } else {
       alert("Geolocation is not supported by this browser.");
     }
-  });
+
+});
+
+let userLocationMarker = null;
+
+function updateLocationMarker(latlng) {
+    if (!userLocationMarker) {
+        userLocationMarker = new google.maps.Marker({
+            map: map,
+            position: latlng,
+            icon: {
+                path: google.maps.SymbolPath.CIRCLE,
+                scale: 8,
+                fillColor: '#4285F4',
+                fillOpacity: 1,
+                strokeColor: 'white',
+                strokeWeight: 2,
+                strokeOpacity: 1
+            },
+            zIndex: 4 // Make sure the marker is above most other elements
+        });
+
+        // Create the pulsating effect
+        window.setInterval(() => {
+            const icon = userLocationMarker.getIcon();
+            icon.scale = icon.scale === 8 ? 10 : 8; // Toggle between scale 8 and 10
+            userLocationMarker.setIcon(icon);
+        }, 700);
+    } else {
+        userLocationMarker.setPosition(latlng); // Update position if marker already exists
+    }
+}
+
 
 //Add stops function
 function addStop() {
@@ -81,7 +115,6 @@ let service;
 let infowindow;
 let directionsService;
 let directionsRenderer;
-let userLocationMarker = null;
 
 function initMap() {
   const bergen = new google.maps.LatLng(60.3913, 5.3221); // Example: Bergen, Norway

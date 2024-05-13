@@ -162,7 +162,7 @@ input[type="text"] {
 }
 
 .first-charging-station a {
-  color: #000000;
-  font-weight: bold;
-  text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
 }
