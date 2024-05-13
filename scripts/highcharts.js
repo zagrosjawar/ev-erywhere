@@ -72,7 +72,7 @@ function updateHighChart(data) {
   //funksjon for å oppdatere Highchartsen etter api-en
   Highcharts.chart("stats", {
     title: {
-      text: "Circle K Fløen",
+      text: "Circle K Dale",
       align: "left",
     },
 
@@ -109,7 +109,7 @@ function updateHighChart(data) {
 
     series: [
       {
-        name: "Opptatte Ladestasjoner",
+        name: "Gjennomsnittlig strømforbruk i kWh",
         data: data.data.averages,
         zIndex: 1,
         marker: {
@@ -119,7 +119,7 @@ function updateHighChart(data) {
         },
       },
       {
-        name: "Range",
+        name: "Minimum og maksimum strømforbruk i kWh",
         data: data.data.ranges,
         type: "arearange",
         lineWidth: 0,
