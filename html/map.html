@@ -1,86 +1,112 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maps</title>
     <!-- links -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link type="text/css" rel="stylesheet" href="../styles/styles.css" />
     <link rel="stylesheet" href="../styles/map_styles.css" />
-    
+
     <link
       rel="stylesheet"
       media="screen and (min-width: 320px) and (max-width: 431px)"
-      href="../styles/mobile-style.css"
-    />
-</head>
-<body>
+      href="../styles/mobile-style.css" />
+  </head>
+  <body>
     <!-- embedding Google Maps in my Web Page-->
     <div id="map"></div>
 
     <!-- Button to show charging stations page-->
     <button id="showStationsBtn" onclick="showStations()">⚡</button>
-    <div id="stationsPanel" class="stationsPanel" style="display: none;">
-      <iframe id="stationsFrame" src="#" style="width:100%; height:100%; border:none;"></iframe>
+    <div id="stationsPanel" class="stationsPanel" style="display: none">
+      <iframe
+        id="stationsFrame"
+        src="#"
+        style="width: 100%; height: 100%; border: none"></iframe>
     </div>
-    
+
     <!-- Form to find route -->
-    <div id="routeForm">
+    <div id="routeForm" class="mapContent">
       <p>Hvor skal du?</p>
-        <label for="from">Fra:</label>
-        <div class="input-icon-wrapper">
-          <input type="text" id="from" placeholder="Min posisjon">
-          <img src="../assets/current-location.svg" alt="Current Location" id="currentLocationButton" style="cursor: pointer;">
+      <label for="from">Fra:</label>
+      <div class="input-icon-wrapper">
+        <input
+          type="text"
+          id="from"
+          placeholder="Min posisjon (eks.: Bergen)"
+          value="Bergen, Norway" />
+        <img
+          src="../assets/current-location.svg"
+          alt="Current Location"
+          id="currentLocationButton"
+          style="cursor: pointer" />
       </div>
-        <div id="stopsContainer">
-          <button type="button" id="stops" onclick="addStop()">
-            Legg til stop
-            <img src="../assets/plus_icon.svg" alt="Add" style="vertical-align: middle;">
-          </button>
-        </div><br>
+      <div id="stopsContainer">
+        <button type="button" id="stops" onclick="addStop()">
+          Legg til stop
+          <img
+            src="../assets/plus_icon.svg"
+            alt="Add"
+            style="vertical-align: middle" />
+        </button>
+      </div>
 
-        <label for="to">Til:</label><br>
-        <input type="text" id="to" placeholder="Destinasjon">
+      <label for="to">Til:</label>
+      <input
+        type="text"
+        id="to"
+        placeholder="Destinasjon (eks.: Voss)"
+        value="Voss, Norway" />
 
-        <button class="filled-button" onclick="findRoute()">Finn rute</button>
+      <button class="filled-button" onclick="findRoute()">Finn rute</button>
     </div>
 
-   <!-- Navigation Panel, initially hidden -->
-    <div id="navigationPanel" style="display: none;">
+    <!-- Navigation Panel, initially hidden -->
+    <div id="navigationPanel" style="display: none">
       <div id="recommendedRoute">
         <h3>Anbefalt route</h3>
-        <p><span id="routeDistance">21 km</span> (<span id="routeTime">25 min</span>)</p>
-        <br>
+        <p>
+          <span id="routeDistance">21 km</span> (<span id="routeTime"
+            >25 min</span
+          >)
+        </p>
+        <br />
         <h3>Stopp(1)</h3>
-          <div class="first-charging-station">
-              <p>
-                <span id="nextChargeStation">Ladestasjon</span><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="15"
-                viewBox="0 0 15 15"
-                fill="none"
-                style="margin-left: 5px;margin-right: 20px; vertical-align: middle;"
-              >
-                <circle cx="7.5" cy="7.5" r="7.5" fill="#00C851" />
-              </svg>
-                <span id="nextChargeTime">10min / 8 km</span>
-              </p>
-              <a href="ladestasjon_oversikt.html">Statistikk</a>
-          </div> 
+        <div class="first-charging-station">
+          <p>
+            <span id="nextChargeStation">Ladestasjon</span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="15"
+              height="15"
+              viewBox="0 0 15 15"
+              fill="none"
+              style="
+                margin-left: 5px;
+                margin-right: 20px;
+                vertical-align: middle;
+              ">
+              <circle cx="7.5" cy="7.5" r="7.5" fill="#00C851" />
+            </svg>
+            <span id="nextChargeTime">10min / 8 km</span>
+          </p>
+          <a href="ladestasjon_oversikt.html">Statistikk</a>
+        </div>
       </div>
-        <button button class="filled-button" onclick="startNavigation()">Start</button>
+      <button button class="filled-button" onclick="startNavigation()">
+        Start
+      </button>
     </div>
-  <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeYKcxfNEqXMVxghIIk7PzPl-4vJW3BE4&loading=async&callback=initMap&libraries=places,directions">
-  </script>
-  <script src="../scripts/map.js"></script>
-</body>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeYKcxfNEqXMVxghIIk7PzPl-4vJW3BE4&loading=async&callback=initMap&libraries=places,directions"></script>
+    <script src="../scripts/map.js"></script>
+  </body>
 </html>
