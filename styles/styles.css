@@ -251,7 +251,7 @@ h3 {
 } */
 
 footer {
-  min-height: 105px;
+  height: 2rem;
 }
 /* Desktop */
 @media (min-width: 980px) {

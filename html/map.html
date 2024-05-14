@@ -39,7 +39,7 @@
         <input
           type="text"
           id="from"
-          placeholder="Min posisjon (eks.: Bergen)"/>
+          placeholder="Min posisjon (eks.: Bergen)" />
         <img
           src="../assets/current-location.svg"
           alt="Current Location"
@@ -57,11 +57,7 @@
       </div>
 
       <label for="to">Til:</label>
-      <input
-        type="text"
-        id="to"
-        placeholder="Destinasjon (eks.: Voss)"
-        />
+      <input type="text" id="to" placeholder="Destinasjon (eks.: Voss)" />
 
       <button class="filled-button" onclick="findRoute()">Finn rute</button>
     </div>
@@ -77,32 +73,37 @@
         </p>
         <br />
         <h3>Stopp(1)</h3>
-          <div class="first-charging-station">
-              <p>
-                <span id="nextChargeStation">Ladestasjon</span><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="15"
-                viewBox="0 0 15 15"
-                fill="none"
-                style="margin-left: 
-                  5px;margin-right: 20px; 
-                  vertical-align: middle;">
-                <circle cx="7.5" cy="7.5" r="7.5" fill="#00C851" />
-              </svg>
-               <span id="nextChargeTime">10min / 8 km</span>
-              </p>
-              <a href="statistikk.html">Statistikk</a>
-          </div> 
+        <div class="first-charging-station">
+          <p>
+            <span id="nextChargeStation">Ladestasjon</span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="15"
+              height="15"
+              viewBox="0 0 15 15"
+              fill="none"
+              style="
+                margin-left: 5px;
+                margin-right: 20px;
+                vertical-align: middle;
+              ">
+              <circle cx="7.5" cy="7.5" r="7.5" fill="#00C851" />
+            </svg>
+            <span id="nextChargeTime">10min / 8 km</span>
+          </p>
+          <a href="statistikk.html">Statistikk</a>
+        </div>
       </div>
       <button button class="filled-button" onclick="startNavigation()">
         Start
       </button>
     </div>
-    
-  <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeYKcxfNEqXMVxghIIk7PzPl-4vJW3BE4&loading=async&callback=initMap&libraries=places,directions">
-  </script>
-  <script src="../scripts/map.js"></script>
-</body>
+    <footer></footer>
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeYKcxfNEqXMVxghIIk7PzPl-4vJW3BE4&loading=async&callback=initMap&libraries=places,directions"></script>
+    <script src="../scripts/map.js"></script>
+  </body>
 </html>
