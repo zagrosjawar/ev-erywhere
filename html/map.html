@@ -41,9 +41,10 @@
         <input
           type="text"
           id="from"
-          placeholder="Min posisjon (eks.: Bergen)" 
-          value="festplassen"/>
-´        <img
+          placeholder="Min posisjon (eks.: Bergen)"
+          value="festplassen" />
+        ´
+        <img
           src="../assets/current-location.svg"
           alt="Current Location"
           id="currentLocationButton"
@@ -64,8 +65,7 @@
         type="text"
         id="to"
         placeholder="Destinasjon (eks.: Voss)"
-        value="Åsane senter"
-        />
+        value="Åsane senter" />
 
       <button class="filled-button" onclick="findRoute()">Finn rute</button>
     </div>
@@ -106,35 +106,41 @@
         Start
       </button>
     </div>
-    
+
     <!-- Live navigation and information pane -->
-  <!-- Improved Navigation Detail Pane -->
+    <!-- Improved Navigation Detail Pane -->
     <div id="navigationPane" class="navigation-pane">
       <div id="directionsInfo" class="directions-info">
-          <div class="directions-header" onclick="toggleNavigationPane()">
-              <h2>Veibeskrivelse</h2>
-          </div>
-          <div id="liveDirections" class="live-directions">
-              <!-- Live navigation instructions will be updated here -->
-          </div>
-          <div class="charging-station-info">
-              <h3>Charging Station</h3>
-              <p id="chargingDetails">Name: <span id="stationName"></span></p>
-              <p>Time/Distance: <span id="stationTimeDistance"></span></p>
-              <a href="#" id="stationStatsLink">View Stats</a>
-          </div>
-          <div class="route-summary">
-              <p>Estimated Arrival: <span id="estimatedArrival"></span></p>
-              <p>Destination: <span id="finalDestination"></span></p>
-          </div>
-          <button onclick="endNavigation()" class="end-nav-button">End Navigation</button>
+        <div class="route-summary">
+          <p>Estimated Arrival: <span id="estimatedArrival"></span></p>
+          <p>Destination: <span id="finalDestination"></span></p>
+        </div>
+        <div class="charging-station-info">
+          <h3>Charging Station</h3>
+          <p id="chargingDetails">Name: <span id="stationName"></span></p>
+          <p>Time/Distance: <span id="stationTimeDistance"></span></p>
+          <a href="#" id="stationStatsLink">View Stats</a>
+        </div>
+
+        <div class="directions-header" onclick="toggleNavigationPane()">
+          <h2>Veibeskrivelse</h2>
+        </div>
+        <div id="liveDirections" class="live-directions">
+          <!-- Live navigation instructions will be updated here -->
+        </div>
+
+        <div id="sticky-part" class="sticky-part-of-directions">
+          <button onclick="endNavigation()" class="end-nav-button">
+            End Navigation
+          </button>
+        </div>
       </div>
     </div>
 
-
-  <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeYKcxfNEqXMVxghIIk7PzPl-4vJW3BE4&loading=async&callback=initMap&libraries=places,directions">
-  </script>
-  <script src="../scripts/map.js"></script>
-</body>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeYKcxfNEqXMVxghIIk7PzPl-4vJW3BE4&loading=async&callback=initMap&libraries=places,directions"></script>
+    <script src="../scripts/map.js"></script>
+  </body>
 </html>
