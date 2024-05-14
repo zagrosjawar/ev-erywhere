@@ -280,3 +280,167 @@ function calculateDistanceToStation(stationLocation, nearPoint, callback) {
     }
   });
 }
+
+
+// Live navigation and information pane
+function startNavigation() {
+    // Show the navigation pane
+    document.getElementById('navigationPane').style.display = 'block';
+    // Begin routing
+    calculateRoute();
+}
+
+function calculateRoute() {
+    const from = document.getElementById('from').value;
+    const to = document.getElementById('to').value;
+    const waypoints = Array.from(document.querySelectorAll('.stops-input')).map(input => ({
+        location: input.value,
+        stopover: true
+    }));
+
+    const request = {
+        origin: from,
+        destination: to,
+        waypoints: waypoints,
+        travelMode: 'DRIVING',
+        provideRouteAlternatives: true
+    };
+
+    directionsService.route(request, function(result, status) {
+        if (status === 'OK') {
+            directionsRenderer.setDirections(result);
+            updateNavigationPane(result.routes[0]);  // Populate the navigation pane
+        } else {
+            console.error('Directions request failed due to: ' + status);
+        }
+    });
+}
+
+function updateNavigationPane(route) {
+    const leg = route.legs[route.legs.length - 1]; // Use the last leg for end details
+    document.getElementById('estimatedArrival').textContent = leg.duration.text;
+    document.getElementById('finalDestination').textContent = leg.end_address;
+
+    // Simplify navigation instructions
+    let instructions = '';
+    route.legs.forEach(leg => {
+        leg.steps.forEach(step => {
+            instructions += `<p>${step.instructions} - ${step.distance.text}</p>`;
+        });
+    });
+    document.getElementById('liveDirections').innerHTML = instructions;
+
+    // Placeholder: Update with actual charging station details
+    document.getElementById('stationName').textContent = 'Station X';
+    document.getElementById('stationTimeDistance').textContent = '15 mins / 10 km';
+    document.getElementById('stationStatsLink').setAttribute('href', 'statistikk.html');
+}
+
+function endNavigation() {
+    document.getElementById('navigationPane').style.display = 'none'; // Hide the pane
+    window.location.href = 'feedback.html'; // Redirect to feedback page
+}
+
+// swap up and down
+function setupSwipeablePane() {
+    const pane = document.getElementById('navigationPane');
+    let startY = 0;
+    let endY = 0;
+    let isSwiping = false;
+
+    pane.addEventListener('touchstart', function(e) {
+        startY = e.touches[0].clientY;
+        isSwiping = true;
+    });
+
+    pane.addEventListener('touchmove', function(e) {
+        if (isSwiping) {
+            endY = e.touches[0].clientY;
+            let changeY = startY - endY;
+            if (changeY > 0) {
+                pane.style.transform = `translateY(${changeY}px)`;
+            } else if (pane.classList.contains('active')) {
+                pane.style.transform = `translateY(${Math.min(0, -changeY)}px)`;
+            }
+        }
+    });
+
+    pane.addEventListener('touchend', function(e) {
+        isSwiping = false;
+        let changeY = startY - endY;
+        // Determine swipe significance
+        if (Math.abs(changeY) > 50) { // Threshold for swipe action
+            if (changeY > 0) {
+                pane.classList.add('active');
+            } else {
+                pane.classList.remove('active');
+            }
+            pane.style.transform = ''; // Reset transform to leverage CSS for positioning
+        } else {
+            pane.style.transform = ''; // Reset transform on small or invalid swipes
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', setupSwipeablePane);
+
+function startNavigation() {
+    const pane = document.getElementById('navigationPane');
+    pane.classList.add('active'); // Show pane
+    calculateRoute();
+}
+
+function endNavigation() {
+    const pane = document.getElementById('navigationPane');
+    pane.classList.remove('active'); // Hide pane
+    window.location.href = 'vurderreise.html'; // Redirect to feedback page
+}
+
+function toggleNavigationPane() {
+    const pane = document.getElementById('navigationPane');
+    // Check if the pane is active (fully visible)
+    if (pane.classList.contains('active')) {
+        // Move pane to only show the top 10% (adjust as needed)
+        pane.style.transform = 'translateY(calc(100% - 91px))'; // Adjust 50px to the height of the header/tab
+        pane.classList.remove('active');
+    } else {
+        // Move pane to fully visible
+        pane.style.transform = 'translateY(0%)';
+        pane.classList.add('active');
+    }
+}
+
+
+function setupSwipeablePane() {
+    const pane = document.getElementById('navigationPane');
+    let startY = 0;
+    let endY = 0;
+    let isSwiping = false;
+
+    pane.addEventListener('touchstart', function(e) {
+        startY = e.touches[0].clientY;
+        isSwiping = true;
+    });
+
+    pane.addEventListener('touchmove', function(e) {
+        if (isSwiping) {
+            endY = e.touches[0].clientY;
+            let changeY = startY - endY;
+            if (changeY > 0 && pane.classList.contains('active')) {
+                pane.style.transform = `translateY(${changeY}px)`;
+            } else {
+                pane.style.transform = `translateY(${Math.max(changeY, -100)}%)`;
+            }
+        }
+    });
+
+    pane.addEventListener('touchend', function(e) {
+        isSwiping = false;
+        let changeY = startY - endY;
+        if (Math.abs(changeY) > 50) { // Threshold for swipe action
+            toggleNavigationPane(); // Use the toggle function to set final state
+        } else {
+            pane.style.transform = ''; // Reset transform on small or invalid swipes
+        }
+    });
+}
