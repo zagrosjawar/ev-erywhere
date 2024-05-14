@@ -20,10 +20,12 @@
   </head>
   <body>
     <!-- embedding Google Maps in my Web Page-->
+    <button id="showStationsBtn" onclick="showStations()"><img src="../assets/lightning.svg" alt="Lightning icon"></button>
     <div id="map"></div>
+    
 
     <!-- Button to show charging stations page-->
-    <button id="showStationsBtn" onclick="showStations()">⚡</button>
+    
     <div id="stationsPanel" class="stationsPanel" style="display: none">
       <iframe
         id="stationsFrame"
