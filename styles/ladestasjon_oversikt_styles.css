@@ -1,87 +1,88 @@
 #ladestasjonMainContent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 80px;
 }
 
 #ladestasjonerOverskrift {
-    margin-top: 30px;
-    margin-bottom: 26px;
+  margin-top: 30px;
+  margin-bottom: 26px;
 }
 
 #ladestasjonContainer {
-    display: flex;
-    width: 80%;
-    height: 100%;
-    padding: 17px 17px;
-    flex-shrink: 0;
-    flex-direction: column;
-    margin-bottom: 7em;
+  display: flex;
+  width: 80%;
+  height: 100%;
+  padding: 17px 17px;
+  flex-shrink: 0;
+  flex-direction: column;
+  margin-bottom: 7em;
 
-    border-radius: 8px;
-    border: 1px solid var(--Primary-Lys, #7BCBC6);
-    background: #FFF;
+  border-radius: 8px;
+  border: 1px solid var(--Primary-Lys, #7bcbc6);
+  background: #fff;
 }
 
 #ladeContainerOverskrift {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    gap: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 15px 30px;
 }
 
 .defaultKnapp {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 0.5em;
-    background-color: #07494F;
-    color: white;
-    padding: 10px 24px;
-    border-radius: 6px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.5em;
+  background-color: #07494f;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
 }
 
 .ladestasjonKnapp {
-    display: flex;
-    padding: 15px 10px;
-    align-items: center;
-    gap: 35px 20px;
-    margin: 20px 0px;
-    justify-content: space-between;
-
-    border-radius: 6px;
-    background: #FFF;
-    box-shadow: 0px 2px 6px 0px #83c5be80;
+  display: flex;
+  padding: 15px 10px;
+  align-items: center;
+  gap: 35px 20px;
+  margin: 20px 0px;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 2px 6px 0px #83c5be80;
 }
 
 .ladestasjonKnapp:hover {
-    background-color: #DBF7F4;
+  background-color: #dbf7f4;
 }
 
 .avstandInfo {
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: center;
-    gap: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  gap: 50px;
 }
 
 .ladestasjonKnapp p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
 }
 
 .ikkeBold {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .bold {
-    font-weight: 600;
+  font-weight: 600;
 }
-

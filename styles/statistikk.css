@@ -47,7 +47,7 @@ h4 {
   padding: 10px 24px 10px 24px;
   border: 1px solid #07494f;
   border-radius: 10px;
-
+  cursor: pointer;
   margin-top: 2rem;
 }
 .station-header {
