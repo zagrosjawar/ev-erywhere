@@ -16,14 +16,43 @@
       rel="stylesheet"
       media="screen and (min-width: 320px) and (max-width: 431px)"
       href="styles/mobile-style.css" /> -->
-    <!-- Link til midlertidig stylesheet -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.10.5/dist/full.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
     <link rel="stylesheet" href="../styles/mine-reiser.css" />
     <link rel="stylesheet" href="../styles/styles.css" />
+    <script>
+      // Function to load CSS asynchronously
+      function loadCSSAsync(url) {
+        var link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = url;
+        document.head.appendChild(link);
+
+        return new Promise(function (resolve, reject) {
+          link.onload = resolve;
+          link.onerror = reject;
+        });
+      }
+
+      // Load Tailwind CSS asynchronously
+      loadCSSAsync(
+        "https://cdn.jsdelivr.net/npm/daisyui@4.10.5/dist/full.min.css"
+      )
+        .then(function () {
+          // CSS loaded successfully, remove the flicker
+          setTimeout(() => {
+            document.documentElement.style.visibility = "visible";
+          }, 100);
+        })
+        .catch(function (error) {
+          console.error("Failed to load CSS:", error);
+        });
+    </script>
+
+    <style>
+      /* Initially hide the page */
+      html {
+        visibility: hidden;
+      }
+    </style>
   </head>
   <body class="mx-auto">
     <div class="container mx-auto mt-4 p-4">
