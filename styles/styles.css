@@ -121,8 +121,7 @@ h3 {
   justify-content: center;
   align-items: center;
   padding-right: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 10px 0px;
 }
 
 .bluetooth-section h3 {
