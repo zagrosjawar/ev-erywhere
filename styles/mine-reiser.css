@@ -138,3 +138,7 @@ h4 {
   object-fit: cover;
   overflow: hidden;
 }
+
+.card-body {
+  cursor: pointer;
+}
