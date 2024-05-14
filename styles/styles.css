@@ -107,9 +107,8 @@ h3 {
 }
 
 .bluetooth-icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
+  width: 20px;
+  height: 20px;
 }
 
 .bluetooth-section h2,
@@ -121,7 +120,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 59px;
+  padding-right: 10px;
 }
 
 .bluetooth-section h3 {
