@@ -10,9 +10,9 @@
 
 /* Button for showing stations */
 #showStationsBtn {
-  position: absolute;
-  top: 60px;
-  right: 330px;
+  position: relative;
+  bottom: 400px;
+  left: 10px;
   width: 50px;
   padding: 12px 9px 9px 9px;
   font-size: 24px;
@@ -21,12 +21,21 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 2; /* Higher than map but lower than the panel */
+  z-index: 99;   /* Higher than map but lower than the panel */
+}
+
+#underKart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -10px;
 }
 
 #showStationsBtn:hover {
   background-color: #3b472d;
 }
+
 
 /* Overlay panel for stations, using fixed positioning to cover the viewport */
 .stationsPanel {
@@ -56,7 +65,7 @@
   border-radius: 20px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  padding: 20px;
+  padding: 5px 20px 20px 20px;
   /* border: 1px solid #ccc; */
 }
 

@@ -20,9 +20,8 @@
   </head>
   <body>
     <!-- embedding Google Maps in my Web Page-->
-    <button id="showStationsBtn" onclick="showStations()"><img src="../assets/lightning.svg" alt="Lightning icon"></button>
-    <div id="map"></div>
     
+    <div id="map"></div>
 
     <!-- Button to show charging stations page-->
     
@@ -35,7 +34,7 @@
 
     <!-- Form to find route -->
     <div id="routeForm" class="mapContent">
-      <p>Hvor skal du?</p>
+      <p id="underKart">Hvor skal du?<button id="showStationsBtn" onclick="showStations()"><img src="../assets/lightning.svg" alt="Lightning icon"></button></p>
       <label for="from">Fra:</label>
       <div class="input-icon-wrapper">
         <input
