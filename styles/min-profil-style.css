@@ -48,7 +48,6 @@ h4 {
   width: 90%;
   margin: auto;
   margin-top: 1rem;
-  margin-bottom:80px;
 }
 
 .header-img {
@@ -140,10 +139,6 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-footer {
-  height: 105px;
 }
 
 /* Navbar */

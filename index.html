@@ -9,37 +9,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link type="text/css" rel="stylesheet" href="styles/styles.css" />
     <link
       rel="stylesheet"
       media="screen and (min-width: 320px) and (max-width: 431px)"
-      href="styles/mobile-style.css"
-    />
+      href="styles/mobile-style.css" />
   </head>
   <body>
     <!-- header -->
     <div class="container">
       <header class="header">
-        <img src="assets/everywhere_logo.svg" alt="Everywhere Logo" class="logo" />
+        <img
+          src="assets/everywhere_logo.svg"
+          alt="Everywhere Logo"
+          class="logo" />
       </header>
       <div class="bluetooth-section">
         <h2>Koble til bilen din</h2>
         <div class="bluetooth-container">
-          <img src="assets/bluetooth_icon.svg" alt="Bluetooth Icon" class="bluetooth-icon">
+          <img
+            src="assets/bluetooth_icon.svg"
+            alt="Bluetooth Icon"
+            class="bluetooth-icon" />
           <h3>Bluetooth enheter</h3>
         </div>
 
         <!-- devices and add to devices-->
         <ul class="device-list">
           <li>Volskwagen ID buzz <span class="status">Ikke tilkoblet</span></li>
-          <li>
-            Porche 911 <span class="status">Ikke tilkoblet</span>
-          </li>
+          <li>Porche 911 <span class="status">Ikke tilkoblet</span></li>
           <li>Polestar 4 <span class="status">Ikke tilkoblet</span></li>
           <li>Ferrari SF90 XX <span class="status">Ikke tilkoblet</span></li>
-          <li class="add-device"> <!-- Add new device/car -->
+          <li class="add-device">
+            <!-- Add new device/car -->
             Legg til
             <span class="plus-icon">
               <svg
@@ -47,40 +50,66 @@
                 height="18"
                 viewBox="0 0 18 18"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M9 5.8V12.2M5.8 9H12.2M17 9C17 13.4183 13.4183 17 9 17C4.58172 17 1 13.4183 1 9C1 4.58172 4.58172 1 9 1C13.4183 1 17 4.58172 17 9Z"
                   stroke="#1B1D20"
                   stroke-width="1.5"
                   stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+                  stroke-linejoin="round" />
               </svg>
             </span>
           </li>
         </ul>
       </div>
       <a href="html/frame-page.html">
-      <button class="continue-button">Fortsett</button>
+        <button class="continue-button">Fortsett</button>
       </a>
     </div>
 
     <!-- Pop-up Form for Adding New Device -->
-  <div id="addDeviceModal" style="display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); align-items: center; justify-content: center;">
-    <div>
-      <form id="newDeviceForm">
-        <label for="deviceName">Navn*</label>
-        <input type="text" id="deviceName" name="deviceName" placeholder="Toyota Yaris" required><br><br>
-        <label for="deviceRange">Rekkevidde*</label>
-        <input type="text" id="deviceRange" name="deviceRange" placeholder="445 | km" required><br><br>
-        <label for="deviceOwner">Eier</label>
-        <input type="text" id="deviceOwner" name="deviceOwner" placeholder="Ditt navn"><br><br>
-        <button class="outlined-button" type="button" onclick="closeModal()">Tilbake</button>
-        <button class="filled-button" type="submit">Legg til</button>
-      </form>
+    <div
+      id="addDeviceModal"
+      style="
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        align-items: center;
+        justify-content: center;
+      ">
+      <div>
+        <form id="newDeviceForm">
+          <label for="deviceName">Navn*</label>
+          <input
+            type="text"
+            id="deviceName"
+            name="deviceName"
+            placeholder="Toyota Yaris"
+            required /><br /><br />
+          <label for="deviceRange">Rekkevidde*</label>
+          <input
+            type="text"
+            id="deviceRange"
+            name="deviceRange"
+            placeholder="445 | km"
+            required /><br /><br />
+          <label for="deviceOwner">Eier</label>
+          <input
+            type="text"
+            id="deviceOwner"
+            name="deviceOwner"
+            placeholder="Ditt navn" /><br /><br />
+          <button class="outlined-button" type="button" onclick="closeModal()">
+            Tilbake
+          </button>
+          <button class="filled-button" type="submit">Legg til</button>
+        </form>
+      </div>
     </div>
-  </div>
 
     <script src="scripts/main.js" defer></script>
   </body>

@@ -79,52 +79,55 @@
         </p>
         <br />
         <h3>Stopp(1)</h3>
-          <div class="first-charging-station">
-              <p>
-                <span id="nextChargeStation">Ladestasjon</span><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="15"
-                viewBox="0 0 15 15"
-                fill="none"
-                style="margin-left: 
-                  5px;margin-right: 20px; 
-                  vertical-align: middle;">
-                <circle cx="7.5" cy="7.5" r="7.5" fill="#00C851" />
-              </svg>
-               <span id="nextChargeTime">10min / 8 km</span>
-              </p>
-              <a href="statistikk.html">Statistikk</a>
-          </div> 
+        <div class="first-charging-station">
+          <p>
+            <span id="nextChargeStation">Ladestasjon</span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="15"
+              height="15"
+              viewBox="0 0 15 15"
+              fill="none"
+              style="
+                margin-left: 5px;
+                margin-right: 20px;
+                vertical-align: middle;
+              ">
+              <circle cx="7.5" cy="7.5" r="7.5" fill="#00C851" />
+            </svg>
+            <span id="nextChargeTime">10min / 8 km</span>
+          </p>
+          <a href="statistikk.html">Statistikk</a>
+        </div>
       </div>
       <button button class="filled-button" onclick="startNavigation()">
         Start
       </button>
     </div>
-
+    
     <!-- Live navigation and information pane -->
   <!-- Improved Navigation Detail Pane -->
-<div id="navigationPane" class="navigation-pane">
-  <div id="directionsInfo" class="directions-info">
-      <div class="directions-header" onclick="toggleNavigationPane()">
-          <h2>Veibeskrivelse</h2>
+    <div id="navigationPane" class="navigation-pane">
+      <div id="directionsInfo" class="directions-info">
+          <div class="directions-header" onclick="toggleNavigationPane()">
+              <h2>Veibeskrivelse</h2>
+          </div>
+          <div id="liveDirections" class="live-directions">
+              <!-- Live navigation instructions will be updated here -->
+          </div>
+          <div class="charging-station-info">
+              <h3>Charging Station</h3>
+              <p id="chargingDetails">Name: <span id="stationName"></span></p>
+              <p>Time/Distance: <span id="stationTimeDistance"></span></p>
+              <a href="#" id="stationStatsLink">View Stats</a>
+          </div>
+          <div class="route-summary">
+              <p>Estimated Arrival: <span id="estimatedArrival"></span></p>
+              <p>Destination: <span id="finalDestination"></span></p>
+          </div>
+          <button onclick="endNavigation()" class="end-nav-button">End Navigation</button>
       </div>
-      <div id="liveDirections" class="live-directions">
-          <!-- Live navigation instructions will be updated here -->
-      </div>
-      <div class="charging-station-info">
-          <h3>Charging Station</h3>
-          <p id="chargingDetails">Name: <span id="stationName"></span></p>
-          <p>Time/Distance: <span id="stationTimeDistance"></span></p>
-          <a href="#" id="stationStatsLink">View Stats</a>
-      </div>
-      <div class="route-summary">
-          <p>Estimated Arrival: <span id="estimatedArrival"></span></p>
-          <p>Destination: <span id="finalDestination"></span></p>
-      </div>
-      <button onclick="endNavigation()" class="end-nav-button">End Navigation</button>
-  </div>
-</div>
+    </div>
 
 
   <script async defer
