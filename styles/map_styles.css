@@ -162,61 +162,139 @@ input[type="text"] {
 }
 
 .first-charging-station a {
-    color: #000000;
-    font-weight: bold;
-    text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /* Live navigation and information pane */
 .navigation-pane {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    border-top: 1px solid #ccc;
-    padding: 10px;
-    z-index: 5;
-    transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
-    transform: translateY(100%); /* Start off screen */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  z-index: 5;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
+  transform: translateY(100%); /* Start off screen */
 }
 
 /* Class to apply when pane is active */
 .navigation-pane.active {
-    transform: translateY(0); /* Adjust to show the pane */
+  transform: translateY(0); /* Adjust to show the pane */
 }
 
-
-.directions-info {
-    max-height: 300px;
-    overflow-y: auto;
+.directions-header h2,
+.charging-station-info h3 {
+  color: #333;
 }
-
-.directions-header h2, .charging-station-info h3 {
-    color: #333;
+.directions-header h2 {
+  width: 95%;
+  margin: auto;
 }
 
 .live-directions p {
-    margin: 5px 0;
-    font-size: 16px;
+  margin: 5px 0;
+  font-size: 16px;
 }
 
-.route-summary p, .charging-station-info p {
-    font-size: 14px;
-    color: #666;
+.charging-station-info p {
+  font-size: 14px;
+  color: #666;
 }
 
 .end-nav-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #d9534f;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  width: 50%;
+  height: 3rem;
+  margin: auto;
+  padding: 10px;
+  background-color: #801c0f;
+  color: white;
+  font-size: 0.875rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 .end-nav-button:hover {
-    background-color: #c9302c;
+  background-color: #a82413;
 }
 
+/* Veibeskrivelse */
+.directions-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 375px;
+  overflow-y: auto;
+}
+.charging-station-info {
+  display: flex;
+  padding: 15px 10px;
+  align-items: center;
+  gap: 35px 20px;
+  justify-content: space-between;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 2px 6px 0px #83c5be80;
+  width: 95%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+.charging-station-info a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000000;
+}
+.live-directions {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 5rem;
+}
+.route-summary {
+  padding-bottom: 0.5rem;
+  width: 95%;
+  margin: auto;
+  margin-top: 1rem;
+}
+.route-summary p {
+  font-size: 1.25rem;
+  margin-top: 0.2rem;
+}
+
+#liveDirections > p:nth-child(4),
+#liveDirections > p:nth-child(7),
+#liveDirections > p:nth-child(10) {
+  display: none;
+}
+
+#liveDirections > p:nth-child(17) {
+  margin-bottom: 20px;
+}
+
+.sticky-part-of-directions {
+  background-color: #ffffff;
+  display: flex;
+  width: 100%;
+  margin: auto;
+  flex-direction: column;
+  padding: 1rem;
+  padding-bottom: 10rem;
+  position: fixed;
+  bottom: 80px;
+  transform: translateY(100%);
+}
+.sticky-part-of-directions.active {
+  transform: translateY(0%);
+}
+#liveDirections > p:nth-child(1) {
+  font-size: 1.5rem;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0px 2px 6px 0px #83c5be80;
+}
