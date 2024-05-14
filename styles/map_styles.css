@@ -166,3 +166,57 @@ input[type="text"] {
     font-weight: bold;
     text-decoration: none;
 }
+
+/* Live navigation and information pane */
+.navigation-pane {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    z-index: 5;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
+    transform: translateY(100%); /* Start off screen */
+}
+
+/* Class to apply when pane is active */
+.navigation-pane.active {
+    transform: translateY(0); /* Adjust to show the pane */
+}
+
+
+.directions-info {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.directions-header h2, .charging-station-info h3 {
+    color: #333;
+}
+
+.live-directions p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.route-summary p, .charging-station-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+.end-nav-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.end-nav-button:hover {
+    background-color: #c9302c;
+}
+
