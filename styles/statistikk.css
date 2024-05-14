@@ -47,7 +47,7 @@ h4 {
   padding: 10px 24px 10px 24px;
   border: 1px solid #07494f;
   border-radius: 10px;
-  margin-left: 10%;
+
   margin-top: 2rem;
 }
 .station-header {
@@ -171,4 +171,7 @@ h4 {
   border-radius: 0.375rem;
   color: white;
   background: var(--Primary-P-hvit, #07494f);
+}
+.button-wrapper {
+  display: flex;
 }
