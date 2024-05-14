@@ -123,7 +123,7 @@ function initMap() {
 
   map = new google.maps.Map(document.getElementById("map"), {
     center: bergen,
-    zoom: 15,
+    zoom: 12,
   });
 
   infowindow = new google.maps.InfoWindow();
@@ -134,7 +134,7 @@ function initMap() {
   // Setting up the places service for EV charging stations
   const request = {
     location: bergen,
-    radius: "500000", // Search within a 5000 meter radius
+    radius: "50000", // Search within a 5000 meter radius
     keyword: ["electric vehicle charging station"],
   };
 
@@ -151,6 +151,7 @@ function initMap() {
 }
 
 function callback(results, status) {
+
   if (status === google.maps.places.PlacesServiceStatus.OK) {
     for (let i = 0; i < results.length; i++) {
       createMarker(results[i]);
@@ -164,6 +165,12 @@ function createMarker(place) {
   const marker = new google.maps.Marker({
     map: map,
     position: place.geometry.location,
+    icon: {
+      url: '../assets/map_marker.svg', // Update the path to where your SVG file is located
+      scaledSize: new google.maps.Size(35, 35), // This is for scaling the SVG if necessary
+      origin: new google.maps.Point(0, 0), // Origin point of the icon
+      anchor: new google.maps.Point(15, 15) // Anchor point where the icon is positioned over the coordinate
+    }
   });
 
   google.maps.event.addListener(marker, "click", () => {
