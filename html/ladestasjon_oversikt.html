@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <link type="text/css" rel="stylesheet" href="../styles/styles.css" />
-    <link rel="stylesheet" href="../styles/statistikk.css">
+
     <link
       rel="stylesheet"
       media="screen and (min-width: 320px) and (max-width: 431px)"
@@ -21,173 +21,223 @@
     <link rel="stylesheet" href="../styles/ladestasjon_oversikt_styles.css" />
   </head>
   <body>
-    <button class="back-button" onclick="goBack()">
-      <svg
-        width="16"
-        height="12"
-        viewBox="0 0 16 12"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M14.3333 6H1M1 6L6 11M1 6L6 1"
-          stroke="#07494F"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round" />
-      </svg>
-      Tilbake
-    </button>
-    <div id="ladestasjonMainContent">
-      <h1 id="ladestasjonerOver skrift" class="ikkeBold">Ladestasjoner</h1>
-      <div id="ladestasjonContainer">
-        <div id="ladeContainerOverskrift">
-          <h3 class="ikkeBold">Mindre enn 10 km unna</h3>
-          <button class="defaultKnapp">
-            Sorter
+    <div class="lade-main">
+      <div class="lade-left">
+        <div class="buttonlade-wrapper">
+          <button class="back-button" onclick="goBack()">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
               width="16"
-              height="17"
-              viewBox="0 0 16 17"
+              height="12"
+              viewBox="0 0 16 12"
               fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M4.66667 3.16669V13.8334M4.66667 13.8334L2 11.1667M4.66667 13.8334L7.33333 11.1667M11.3333 13.8334V3.16669M11.3333 3.16669L8.66667 5.83335M11.3333 3.16669L14 5.83335"
-                stroke="white"
+                d="M14.3333 6H1M1 6L6 11M1 6L6 1"
+                stroke="#07494F"
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
             </svg>
+            Tilbake
           </button>
         </div>
-        <div>
-          <div class="ladestasjonKnapp" onclick="window.location.href = '../html/statistikk.html';">
-            <p>
-              Skottegaten 5<svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="15"
-                viewBox="0 0 15 15"
-                fill="none"
-              >
-                <circle cx="7.5" cy="7.5" r="7.5" fill="#00C851" />
-              </svg>
-            </p>
-            <div class="avstandInfo"><p>1 km / 3 min</p>
-            <p class="bold">Se informasjon</p></div>
-          </div>
-          <div class="ladestasjonKnapp" onclick="window.location.href = '../html/statistikk.html';">
-            <p>
-              Damsgårdsveien 14<svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="15"
-                viewBox="0 0 15 15"
-                fill="none"
-              >
-                <circle cx="7.5" cy="7.5" r="7.5" fill="#00C851" />
-              </svg>
-            </p>
-            <div class="avstandInfo"><p>2,3 km / 5 min</p>
-            <p class="bold">Se informasjon</p></div>
-          </div>
-          <div class="ladestasjonKnapp" onclick="window.location.href = '../html/statistikk.html';">
-            <p>
-              Vestre strømkaien 4<svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="15"
-                viewBox="0 0 15 15"
-                fill="none"
-              >
-                <circle cx="7.5" cy="7.5" r="7.5" fill="#F2B035" />
-              </svg>
-            </p>
-            <div class="avstandInfo"><p>4,8 km / 11 min</p>
-            <p class="bold">Se informasjon</p></div>
-          </div>
-          <div class="ladestasjonKnapp" onclick="window.location.href = '../html/statistikk.html';">
-            <p>
-              Kong Oscars gate 31<svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="15"
-                viewBox="0 0 15 15"
-                fill="none"
-              >
-                <circle cx="7.5" cy="7.5" r="7.5" fill="#00C851" />
-              </svg>
-            </p>
-            <div class="avstandInfo"><p>6 km / 13 min</p>
-            <p class="bold">Se informasjon</p></div>
-          </div>
-          <div><h3 class="ikkeBold">Mer enn 10 km unna</h3></div>
-          <div class="ladestasjonKnapp" onclick="window.location.href = '../html/statistikk.html';">
-            <p>
-              Lundegårdskaien 23<svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="15"
-                viewBox="0 0 15 15"
-                fill="none"
-              >
-                <circle cx="7.5" cy="7.5" r="7.5" fill="#00C851" />
-              </svg>
-            </p>
-            <div class="avstandInfo"><p>11 km / 23 min</p>
-            <p class="bold">Se informasjon</p></div>
-          </div>
-          <div class="ladestasjonKnapp" onclick="window.location.href = '../html/statistikk.html';">
-            <p>
-              Kringsjåveien 56<svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="15"
-                viewBox="0 0 15 15"
-                fill="none"
-              >
-                <circle cx="7.5" cy="7.5" r="7.5" fill="#F2B035" />
-              </svg>
-            </p>
-            <div class="avstandInfo"><p>14 km / 28 min</p>
-            <p class="bold">Se informasjon</p></div>
-          </div>
-          <div class="ladestasjonKnapp" onclick="window.location.href = '../html/statistikk.html';">
-            <p>
-              Laksevåg senter<svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="15"
-                viewBox="0 0 15 15"
-                fill="none"
-              >
-                <circle cx="7.5" cy="7.5" r="7.5" fill="#E95440" />
-              </svg>
-            </p>
-            <div class="avstandInfo"><p>14 km / 26 min</p>
-            <p class="bold">Se informasjon</p></div>
-          </div>
-          <div class="ladestasjonKnapp" onclick="window.location.href = '../html/statistikk.html';">
-            <p>
-              Solheimsgarasjen<svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="15"
-                viewBox="0 0 15 15"
-                fill="none"
-              >
-                <circle cx="7.5" cy="7.5" r="7.5" fill="#00C851" />
-              </svg>
-            </p>
-            <div class="avstandInfo"><p>18 km / 37 min</p>
-            <p class="bold">Se informasjon</p></div>
+        <div class="wrapper-wrapper">
+          <div id="ladestasjonMainContent">
+            <h1 id="ladestasjonerOver skrift" class="ikkeBold">
+              Ladestasjoner
+            </h1>
+            <div id="ladestasjonContainer">
+              <div id="ladeContainerOverskrift">
+                <h3 class="ikkeBold">Mindre enn 10 km unna</h3>
+                <button class="defaultKnapp">
+                  Sorter
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.66667 3.16669V13.8334M4.66667 13.8334L2 11.1667M4.66667 13.8334L7.33333 11.1667M11.3333 13.8334V3.16669M11.3333 3.16669L8.66667 5.83335M11.3333 3.16669L14 5.83335"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div>
+                <div
+                  class="ladestasjonKnapp"
+                  onclick="window.location.href = '../html/statistikk.html';"
+                >
+                  <p>
+                    Skottegaten 5<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                    >
+                      <circle cx="7.5" cy="7.5" r="7.5" fill="#00C851" />
+                    </svg>
+                  </p>
+                  <div class="avstandInfo">
+                    <p>1 km / 3 min</p>
+                    <p class="bold">Se info</p>
+                  </div>
+                </div>
+                <div
+                  class="ladestasjonKnapp"
+                  onclick="window.location.href = '../html/statistikk.html';"
+                >
+                  <p>
+                    Damsgård 14<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                    >
+                      <circle cx="7.5" cy="7.5" r="7.5" fill="#00C851" />
+                    </svg>
+                  </p>
+                  <div class="avstandInfo">
+                    <p>2 km / 5 min</p>
+                    <p class="bold">Se info</p>
+                  </div>
+                </div>
+                <div
+                  class="ladestasjonKnapp"
+                  onclick="window.location.href = '../html/statistikk.html';"
+                >
+                  <p>
+                    Strømkaien 4<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                    >
+                      <circle cx="7.5" cy="7.5" r="7.5" fill="#F2B035" />
+                    </svg>
+                  </p>
+                  <div class="avstandInfo">
+                    <p>4 km / 11 min</p>
+                    <p class="bold">Se info</p>
+                  </div>
+                </div>
+                <div
+                  class="ladestasjonKnapp"
+                  onclick="window.location.href = '../html/statistikk.html';"
+                >
+                  <p>
+                    Oscars 31<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                    >
+                      <circle cx="7.5" cy="7.5" r="7.5" fill="#00C851" />
+                    </svg>
+                  </p>
+                  <div class="avstandInfo">
+                    <p>6 km / 13 min</p>
+                    <p class="bold">Se info</p>
+                  </div>
+                </div>
+                <div><h3 class="ikkeBold">Mer enn 10 km unna</h3></div>
+                <div
+                  class="ladestasjonKnapp"
+                  onclick="window.location.href = '../html/statistikk.html';"
+                >
+                  <p>
+                    Lunde 23<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                    >
+                      <circle cx="7.5" cy="7.5" r="7.5" fill="#00C851" />
+                    </svg>
+                  </p>
+                  <div class="avstandInfo">
+                    <p>11 km / 23 min</p>
+                    <p class="bold">Se info</p>
+                  </div>
+                </div>
+                <div
+                  class="ladestasjonKnapp"
+                  onclick="window.location.href = '../html/statistikk.html';"
+                >
+                  <p>
+                    Kringsjå 56<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                    >
+                      <circle cx="7.5" cy="7.5" r="7.5" fill="#F2B035" />
+                    </svg>
+                  </p>
+                  <div class="avstandInfo">
+                    <p>14 km / 28 min</p>
+                    <p class="bold">Se info</p>
+                  </div>
+                </div>
+                <div
+                  class="ladestasjonKnapp"
+                  onclick="window.location.href = '../html/statistikk.html';"
+                >
+                  <p>
+                    Vestkanten<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                    >
+                      <circle cx="7.5" cy="7.5" r="7.5" fill="#E95440" />
+                    </svg>
+                  </p>
+                  <div class="avstandInfo">
+                    <p>14 km / 26 min</p>
+                    <p class="bold">Se info</p>
+                  </div>
+                </div>
+                <div
+                  class="ladestasjonKnapp"
+                  onclick="window.location.href = '../html/statistikk.html';"
+                >
+                  <p>
+                    Solheim<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                    >
+                      <circle cx="7.5" cy="7.5" r="7.5" fill="#00C851" />
+                    </svg>
+                  </p>
+                  <div class="avstandInfo">
+                    <p>18 km / 37 min</p>
+                    <p class="bold">Se info</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- NavBar
+        <!-- NavBar
     <div class="navBar">
       <a href="min-profil.html"
         ><div class="navMinProfil">
@@ -252,6 +302,7 @@
           </div>
           <p>Mine reiser</p>
         </div></a> -->
+      </div>
     </div>
     <script src="../scripts/ladestasjon_oversikt.js"></script>
   </body>
