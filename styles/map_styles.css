@@ -11,8 +11,10 @@
 /* Button for showing stations */
 #showStationsBtn {
   position: relative;
-  bottom: 450px;
-  left: 10px;
+  /* bottom: 450px;
+  left: 10px; */
+  bottom: 560px; /* Riktig høyde til vår prosjektor hjemme. Må nok endres før pres */
+  left: 16px;
   width: 50px;
   padding: 12px 9px 9px 9px;
   font-size: 24px;
@@ -21,7 +23,7 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 99;   /* Higher than map but lower than the panel */
+  z-index: 99; /* Higher than map but lower than the panel */
 }
 
 #underKart {
@@ -35,7 +37,6 @@
 #showStationsBtn:hover {
   background-color: #3b472d;
 }
-
 
 /* Overlay panel for stations, using fixed positioning to cover the viewport */
 .stationsPanel {
@@ -198,7 +199,7 @@ input[type="text"] {
 
 .directions-header h2,
 .charging-station-info h3 {
-  color: #333;
+  color: #1b1b1b;
 }
 .directions-header h2 {
   width: 95%;
@@ -265,6 +266,7 @@ input[type="text"] {
   flex-direction: column;
   gap: 0.5rem;
   padding-bottom: 5rem;
+  color: #1b1b1b;
 }
 .route-summary {
   padding-bottom: 0.5rem;
